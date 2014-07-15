@@ -1,0 +1,315 @@
+== Info: About to connect() to ssl.reddit.com port 443 (#0)
+== Info:   Trying 107.21.209.37...
+== Info: Connected to ssl.reddit.com (107.21.209.37) port 443 (#0)
+== Info: successfully set certificate verify locations:
+== Info:   CAfile: none
+  CApath: /etc/ssl/certs
+== Info: SSLv3, TLS handshake, Client hello (1):
+=> Send SSL data, 239 bytes (0xef)
+0000: 01 00 00 eb 03 02 53 c4 14 83 3c b6 dc 9f b7 eb ......S...<.....
+0010: 2b 08 ba 1a 1b 63 80 57 1f 53 1a 32 73 94 29 5d +....c.W.S.2s.)]
+0020: fc 5e f2 d7 2e 15 00 00 66 c0 14 c0 0a c0 22 c0 .^......f.....".
+0030: 21 00 39 00 38 00 88 00 87 c0 0f c0 05 00 35 00 !.9.8.........5.
+0040: 84 c0 12 c0 08 c0 1c c0 1b 00 16 00 13 c0 0d c0 ................
+0050: 03 00 0a c0 13 c0 09 c0 1f c0 1e 00 33 00 32 00 ............3.2.
+0060: 9a 00 99 00 45 00 44 c0 0e c0 04 00 2f 00 96 00 ....E.D...../...
+0070: 41 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 15 00 A...............
+0080: 12 00 09 00 14 00 11 00 08 00 06 00 03 00 ff 01 ................
+0090: 00 00 5c 00 00 00 13 00 11 00 00 0e 73 73 6c 2e ..\.........ssl.
+00a0: 72 65 64 64 69 74 2e 63 6f 6d 00 0b 00 04 03 00 reddit.com......
+00b0: 01 02 00 0a 00 34 00 32 00 0e 00 0d 00 19 00 0b .....4.2........
+00c0: 00 0c 00 18 00 09 00 0a 00 16 00 17 00 08 00 06 ................
+00d0: 00 07 00 14 00 15 00 04 00 05 00 12 00 13 00 01 ................
+00e0: 00 02 00 03 00 0f 00 10 00 11 00 0f 00 01 01    ...............
+== Info: SSLv3, TLS handshake, Server hello (2):
+<= Recv SSL data, 98 bytes (0x62)
+0000: 02 00 00 5e 03 02 53 c4 14 83 4d ab 92 8d 91 45 ...^..S...M....E
+0010: 8c a3 d7 0b a0 b6 53 93 29 5e 24 3c 9a 70 3a 90 ......S.)^$<.p:.
+0020: c4 79 9c d1 d7 6a 20 79 00 ad 84 91 ab 07 7e 40 .y...j y......~@
+0030: 06 ed 00 62 79 4f e4 4f f8 2b ae bd 49 0e 0f 78 ...byO.O.+..I..x
+0040: f1 9a 50 f8 7e a7 cc c0 11 00 00 16 00 00 00 00 ..P.~...........
+0050: ff 01 00 01 00 00 0b 00 04 03 00 01 02 00 0f 00 ................
+0060: 01 01                                           ..
+== Info: SSLv3, TLS handshake, CERT (11):
+<= Recv SSL data, 2456 bytes (0x998)
+0000: 0b 00 09 94 00 09 91 00 04 e4 30 82 04 e0 30 82 ..........0...0.
+0010: 03 c8 a0 03 02 01 02 02 11 00 d6 43 e3 aa a0 41 ...........C...A
+0020: 6c 90 d4 fe 41 ff ee 11 fd 87 30 0d 06 09 2a 86 l...A.....0...*.
+0030: 48 86 f7 0d 01 01 05 05 00 30 41 31 0b 30 09 06 H........0A1.0..
+0040: 03 55 04 06 13 02 46 52 31 12 30 10 06 03 55 04 .U....FR1.0...U.
+0050: 0a 13 09 47 41 4e 44 49 20 53 41 53 31 1e 30 1c ...GANDI SAS1.0.
+0060: 06 03 55 04 03 13 15 47 61 6e 64 69 20 53 74 61 ..U....Gandi Sta
+0070: 6e 64 61 72 64 20 53 53 4c 20 43 41 30 1e 17 0d ndard SSL CA0...
+0080: 31 34 30 34 30 38 30 30 30 30 30 30 5a 17 0d 31 140408000000Z..1
+0090: 35 30 34 30 38 32 33 35 39 35 39 5a 30 60 31 21 50408235959Z0`1!
+00a0: 30 1f 06 03 55 04 0b 13 18 44 6f 6d 61 69 6e 20 0...U....Domain 
+00b0: 43 6f 6e 74 72 6f 6c 20 56 61 6c 69 64 61 74 65 Control Validate
+00c0: 64 31 24 30 22 06 03 55 04 0b 13 1b 47 61 6e 64 d1$0"..U....Gand
+00d0: 69 20 53 74 61 6e 64 61 72 64 20 57 69 6c 64 63 i Standard Wildc
+00e0: 61 72 64 20 53 53 4c 31 15 30 13 06 03 55 04 03 ard SSL1.0...U..
+00f0: 14 0c 2a 2e 72 65 64 64 69 74 2e 63 6f 6d 30 82 ..*.reddit.com0.
+0100: 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 ."0...*.H.......
+0110: 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 ad ......0.........
+0120: fe 3b 8f 32 e1 94 d4 8a 0c 3a 13 f7 c4 52 ad bc .;.2.....:...R..
+0130: 18 0d ba 73 10 3f be 1c 5c 78 f9 e1 6d dd 21 f4 ...s.?..\x..m.!.
+0140: db b5 02 aa 0f 0b 30 e3 1e 34 7f cb ab bd 23 dd ......0..4...#.
+0150: de 20 7d 4e 51 e9 05 28 76 bb 5b 80 cf a1 38 eb . }NQ..(v.[...8.
+0160: 53 94 e5 1d b7 93 33 fb b1 34 ab b2 0d 23 a2 3c S.....3..4...#.<
+0170: 29 12 36 a3 09 8c 3d af ce 26 9b 1f 11 dc d3 dc ).6...=..&......
+0180: 89 41 a9 d3 a8 41 cd a9 84 ec 5e dd 58 6b f9 73 .A...A....^.Xk.s
+0190: 12 60 3f 45 de 06 7c fa 05 79 4d a9 2d 68 36 da .`?E..|..yM.-h6.
+01a0: f8 b3 c4 3e 4c 6a 89 d6 5a cc 55 25 fb 1e d5 d2 ...>Lj..Z.U%....
+01b0: 5c c9 aa b2 5b 2d de b6 61 3d 04 b8 a7 a2 7e 05 \...[-..a=....~.
+01c0: cd 6f a1 37 45 3a 53 6d 25 c2 66 52 1d 2d 92 3d .o.7E:Sm%.fR.-.=
+01d0: 1b ea ff 42 3c a3 37 d1 a5 9f 4b af 49 b6 72 7a ...B<.7...K.I.rz
+01e0: 31 21 41 c7 de 63 4c b5 d4 94 29 b2 ca 71 94 eb 1!A..cL...)..q..
+01f0: 2b 20 aa 9e 48 03 1f fe aa 6f 61 93 9a 19 0a 65 + ..H....oa....e
+0200: d4 2b 3f 7d e1 91 ba 76 22 e5 e4 df f0 ce 7e 89 .+?}...v".....~.
+0210: 6f b0 1e 7a 9e 5e 61 68 a6 c2 43 fe 73 40 a9 02 o..z.^ah..C.s@..
+0220: 03 01 00 01 a3 82 01 b2 30 82 01 ae 30 1f 06 03 ........0...0...
+0230: 55 1d 23 04 18 30 16 80 14 b6 a8 ff a2 a8 2f d0 U.#..0......../.
+0240: a6 cd 4b b1 68 f3 e7 50 10 31 a7 79 21 30 1d 06 ..K.h..P.1.y!0..
+0250: 03 55 1d 0e 04 16 04 14 a3 db f9 45 e9 70 c4 d8 .U.........E.p..
+0260: 9a 67 7f e2 e6 84 1b fd ca 1e e3 a8 30 0e 06 03 .g.........0...
+0270: 55 1d 0f 01 01 ff 04 04 03 02 05 a0 30 0c 06 03 U...........0...
+0280: 55 1d 13 01 01 ff 04 02 30 00 30 1d 06 03 55 1d U.......0.0...U.
+0290: 25 04 16 30 14 06 08 2b 06 01 05 05 07 03 01 06 %..0...+........
+02a0: 08 2b 06 01 05 05 07 03 02 30 60 06 03 55 1d 20 .+.......0`..U. 
+02b0: 04 59 30 57 30 4b 06 0b 2b 06 01 04 01 b2 31 01 .Y0W0K..+.....1.
+02c0: 02 02 1a 30 3c 30 3a 06 08 2b 06 01 05 05 07 02 ...0<0:..+......
+02d0: 01 16 2e 68 74 74 70 3a 2f 2f 77 77 77 2e 67 61 ...http://www.ga
+02e0: 6e 64 69 2e 6e 65 74 2f 63 6f 6e 74 72 61 63 74 ndi.net/contract
+02f0: 73 2f 66 72 2f 73 73 6c 2f 63 70 73 2f 70 64 66 s/fr/ssl/cps/pdf
+0300: 2f 30 08 06 06 67 81 0c 01 02 01 30 3c 06 03 55 /0...g.....0<..U
+0310: 1d 1f 04 35 30 33 30 31 a0 2f a0 2d 86 2b 68 74 ...50301./.-.+ht
+0320: 74 70 3a 2f 2f 63 72 6c 2e 67 61 6e 64 69 2e 6e tp://crl.gandi.n
+0330: 65 74 2f 47 61 6e 64 69 53 74 61 6e 64 61 72 64 et/GandiStandard
+0340: 53 53 4c 43 41 2e 63 72 6c 30 6a 06 08 2b 06 01 SSLCA.crl0j..+..
+0350: 05 05 07 01 01 04 5e 30 5c 30 37 06 08 2b 06 01 ......^0\07..+..
+0360: 05 05 07 30 02 86 2b 68 74 74 70 3a 2f 2f 63 72 ...0..+http://cr
+0370: 74 2e 67 61 6e 64 69 2e 6e 65 74 2f 47 61 6e 64 t.gandi.net/Gand
+0380: 69 53 74 61 6e 64 61 72 64 53 53 4c 43 41 2e 63 iStandardSSLCA.c
+0390: 72 74 30 21 06 08 2b 06 01 05 05 07 30 01 86 15 rt0!..+.....0...
+03a0: 68 74 74 70 3a 2f 2f 6f 63 73 70 2e 67 61 6e 64 http://ocsp.gand
+03b0: 69 2e 6e 65 74 30 23 06 03 55 1d 11 04 1c 30 1a i.net0#..U....0.
+03c0: 82 0c 2a 2e 72 65 64 64 69 74 2e 63 6f 6d 82 0a ..*.reddit.com..
+03d0: 72 65 64 64 69 74 2e 63 6f 6d 30 0d 06 09 2a 86 reddit.com0...*.
+03e0: 48 86 f7 0d 01 01 05 05 00 03 82 01 01 00 11 b3 H...............
+03f0: 40 9f 7b 36 cb cc ed 5f 1d 86 ca 40 ee 35 d9 32 @.{6..._...@.5.2
+0400: 18 02 08 e7 75 3c 29 ba 0e 58 a6 f5 ae 28 75 47 ....u<)..X...(uG
+0410: 5a 8f d0 b7 eb 1f 7e 8a 09 88 0c 93 ba cd 3d d7 Z.....~.......=.
+0420: 8a d9 77 02 07 cc 40 a4 d2 45 27 6e 3c fc b3 4d ..w...@..E'n<..M
+0430: 9f fa 31 7e 12 f6 44 b0 72 c6 63 cb db e0 82 5c ..1~..D.r.c....\
+0440: ea 3b f3 76 a7 7f 9f 6c 7c 18 50 2a 4f ba 95 e8 .;.v..l|.P*O...
+0450: 1f 85 22 4a e8 bd 2a 07 64 de a4 32 de c7 73 76 .."J..*.d..2..sv
+0460: 5d 5b c1 48 21 87 16 16 e4 9a 5f 70 3e 77 aa a5 ][.H!....._p>w..
+0470: d9 ed ac 4a f5 ae 9f 77 76 1d ab 6f a9 69 e1 ff ...J...wv..o.i..
+0480: d7 71 06 7d 33 95 42 d9 57 f1 c9 18 55 60 11 af .q.}3.B.W...U`..
+0490: 2f 52 5e e7 f2 c1 f1 61 89 52 0c 40 07 8e 00 e8 /R^....a.R.@....
+04a0: 9c c7 ff 87 68 23 57 7c 4e 25 9f 0f 81 c9 0f 69 ....h#W|N%.....i
+04b0: b5 e0 3e c1 5d b5 fc 2f 50 8d a3 49 78 bc 6f eb ..>.]../P..Ix.o.
+04c0: eb c6 2d 87 68 bf d4 f0 33 d9 cd fd 7b 78 bc 80 ..-.h...3...{x..
+04d0: 04 6a e2 fb e8 83 c7 03 db d6 3a 93 c2 01 4f dc .j........:...O.
+04e0: 9f 8e e8 56 c0 5c b4 df 6e 13 98 4d dc 3c 00 04 ...V.\..n..M.<..
+04f0: a7 30 82 04 a3 30 82 03 8b a0 03 02 01 02 02 10 .0...0..........
+0500: 5a b6 1d ac 1e 4d a2 06 14 c7 55 3d 3d a9 b2 dc Z....M....U==...
+0510: 30 0d 06 09 2a 86 48 86 f7 0d 01 01 05 05 00 30 0...*.H........0
+0520: 81 97 31 0b 30 09 06 03 55 04 06 13 02 55 53 31 ..1.0...U....US1
+0530: 0b 30 09 06 03 55 04 08 13 02 55 54 31 17 30 15 .0...U....UT1.0.
+0540: 06 03 55 04 07 13 0e 53 61 6c 74 20 4c 61 6b 65 ..U....Salt Lake
+0550: 20 43 69 74 79 31 1e 30 1c 06 03 55 04 0a 13 15  City1.0...U....
+0560: 54 68 65 20 55 53 45 52 54 52 55 53 54 20 4e 65 The USERTRUST Ne
+0570: 74 77 6f 72 6b 31 21 30 1f 06 03 55 04 0b 13 18 twork1!0...U....
+0580: 68 74 74 70 3a 2f 2f 77 77 77 2e 75 73 65 72 74 http://www.usert
+0590: 72 75 73 74 2e 63 6f 6d 31 1f 30 1d 06 03 55 04 rust.com1.0...U.
+05a0: 03 13 16 55 54 4e 2d 55 53 45 52 46 69 72 73 74 ...UTN-USERFirst
+05b0: 2d 48 61 72 64 77 61 72 65 30 1e 17 0d 30 38 31 -Hardware0...081
+05c0: 30 32 33 30 30 30 30 30 30 5a 17 0d 32 30 30 35 023000000Z..2005
+05d0: 33 30 31 30 34 38 33 38 5a 30 41 31 0b 30 09 06 30104838Z0A1.0..
+05e0: 03 55 04 06 13 02 46 52 31 12 30 10 06 03 55 04 .U....FR1.0...U.
+05f0: 0a 13 09 47 41 4e 44 49 20 53 41 53 31 1e 30 1c ...GANDI SAS1.0.
+0600: 06 03 55 04 03 13 15 47 61 6e 64 69 20 53 74 61 ..U....Gandi Sta
+0610: 6e 64 61 72 64 20 53 53 4c 20 43 41 30 82 01 22 ndard SSL CA0.."
+0620: 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 0...*.H.........
+0630: 82 01 0f 00 30 82 01 0a 02 82 01 01 00 b6 54 3d ....0.........T=
+0640: a5 db 0d 22 78 50 6a 5a 23 89 3f 97 a1 d4 07 1a ..."xPjZ#.?.....
+0650: a9 58 08 9b a0 15 c3 32 b6 b7 f1 e8 b9 a5 6f ad .X.....2......o.
+0660: 37 f6 6e 71 1b b4 75 2d 48 5e 9f c6 15 aa 81 ef 7.nq..u-H^......
+0670: e5 c4 88 95 8a 3a 6c 77 cc b5 cd 65 e4 67 e5 73 .....:lw...e.g.s
+0680: c9 50 52 94 c1 27 49 3e a0 6b 41 16 41 b6 94 99 .PR..'I>.kA.A...
+0690: 41 ae 3e cb e2 06 46 09 e9 4d be c9 4c 55 a9 18 A.>...F..M..LU..
+06a0: 7e a6 df 6e fd 4a b2 cc 6c 4e d9 c8 50 15 93 b3 ~..n.J..lN..P...
+06b0: f2 e9 e3 c2 6a ad 3a d5 fb c3 79 50 9f 25 79 29 ....j.:...yP.%y)
+06c0: b2 47 64 7c 20 3e e2 08 4d 93 29 14 b6 34 6e cf .Gd| >..M.)..4n.
+06d0: 71 46 7e 76 10 f4 fd 6c aa 01 d2 c2 06 de 92 83 qF~v...l........
+06e0: cc 58 90 2e 92 de 1e 65 b7 63 2f 3d b2 eb 70 8c .X.....e.c/=..p.
+06f0: 4c e0 be 15 9d de c1 4d 56 f8 0b c6 8e 07 b9 5d L......MV......]
+0700: df 95 f0 7b 40 1f 1a 2c d7 9c 2b 4b 76 f4 59 f5 ...{@..,..+Kv.Y.
+0710: 43 c1 2c 66 10 9e 9e 66 96 60 9d 1c 74 1b 4e 18 C.,f...f.`..t.N.
+0720: 5c 08 b0 6e 6c ca 69 1a 02 e9 bb ca 78 ef 66 2e \..nl.i.....x.f.
+0730: e3 32 fd 41 5c 95 74 81 4d f4 da fe 4b 02 03 01 .2.A\.t.M...K...
+0740: 00 01 a3 82 01 3e 30 82 01 3a 30 1f 06 03 55 1d .....>0..:0...U.
+0750: 23 04 18 30 16 80 14 a1 72 5f 26 1b 28 98 43 95 #..0....r_&.(.C.
+0760: 5d 07 37 d5 85 96 9d 4b d2 c3 45 30 1d 06 03 55 ].7....K..E0...U
+0770: 1d 0e 04 16 04 14 b6 a8 ff a2 a8 2f d0 a6 cd 4b .........../...K
+0780: b1 68 f3 e7 50 10 31 a7 79 21 30 0e 06 03 55 1d .h..P.1.y!0...U.
+0790: 0f 01 01 ff 04 04 03 02 01 06 30 12 06 03 55 1d ..........0...U.
+07a0: 13 01 01 ff 04 08 30 06 01 01 ff 02 01 00 30 18 ......0.......0.
+07b0: 06 03 55 1d 20 04 11 30 0f 30 0d 06 0b 2b 06 01 ..U. ..0.0...+..
+07c0: 04 01 b2 31 01 02 02 1a 30 44 06 03 55 1d 1f 04 ...1....0D..U...
+07d0: 3d 30 3b 30 39 a0 37 a0 35 86 33 68 74 74 70 3a =0;09.7.5.3http:
+07e0: 2f 2f 63 72 6c 2e 75 73 65 72 74 72 75 73 74 2e //crl.usertrust.
+07f0: 63 6f 6d 2f 55 54 4e 2d 55 53 45 52 46 69 72 73 com/UTN-USERFirs
+0800: 74 2d 48 61 72 64 77 61 72 65 2e 63 72 6c 30 74 t-Hardware.crl0t
+0810: 06 08 2b 06 01 05 05 07 01 01 04 68 30 66 30 3d ..+........h0f0=
+0820: 06 08 2b 06 01 05 05 07 30 02 86 31 68 74 74 70 ..+.....0..1http
+0830: 3a 2f 2f 63 72 74 2e 75 73 65 72 74 72 75 73 74 ://crt.usertrust
+0840: 2e 63 6f 6d 2f 55 54 4e 41 64 64 54 72 75 73 74 .com/UTNAddTrust
+0850: 53 65 72 76 65 72 5f 43 41 2e 63 72 74 30 25 06 Server_CA.crt0%.
+0860: 08 2b 06 01 05 05 07 30 01 86 19 68 74 74 70 3a .+.....0...http:
+0870: 2f 2f 6f 63 73 70 2e 75 73 65 72 74 72 75 73 74 //ocsp.usertrust
+0880: 2e 63 6f 6d 30 0d 06 09 2a 86 48 86 f7 0d 01 01 .com0...*.H.....
+0890: 05 05 00 03 82 01 01 00 19 53 bf 03 3d 9b e2 6b .........S..=..k
+08a0: 5a fd ba 49 1f 4f ec e1 c6 82 39 3c d2 03 04 0f Z..I.O....9<....
+08b0: ab 7b 3e 82 a9 85 10 1f f4 de 32 af 58 3f ff 70 .{>.......2.X?.p
+08c0: f3 30 1d 97 2d 4c 9a e2 ec 0c 3e 14 2d 2f 98 48 .0..-L....>.-/.H
+08d0: 9d ae 16 6a ac 2d 42 aa b5 64 a4 70 bb eb 73 94 ...j.-B..d.p..s.
+08e0: 7b 46 4c e7 7a 14 76 5b 4c 1d 84 a1 20 74 1f 2e {FL.z.v[L... t..
+08f0: 4b 5c 70 88 dc bd f7 19 3d ed 59 0d e2 3f 26 e2 K\p.....=.Y..?&.
+0900: 9c ac a4 3c 95 1c f8 be 8c 03 ae f0 e5 9c 4d bc ...<..........M.
+0910: c7 9b 58 00 bf af ad fa 37 6e 71 6d 18 34 0e c1 ..X.....7nqm.4..
+0920: ea 6a f8 0d df 69 54 56 15 f2 28 b3 fe a4 63 ec .j...iTV..(...c.
+0930: c5 04 64 60 bb fe 2a f0 f4 87 a1 b0 ae bd aa e4 ..d`..*.........
+0940: 2f e3 03 0b 2f 66 5f 85 a4 32 7b 46 ed 25 0c e7 /.../f_..2{F.%..
+0950: f1 b7 e7 19 fd 60 ba 5f 87 77 de 98 07 96 e4 5e .....`._.w.....^
+0960: ea 63 7d a8 de 55 da 61 5c 3c 90 83 43 04 07 3c .c}..U.a\<..C..<
+0970: dd f3 f8 9f 06 52 0a de c7 b6 7b 8f e1 11 f7 04 .....R....{.....
+0980: 7a 35 ff 6a bc 5b c7 50 49 08 70 6f 94 43 cd 9e z5.j.[.PI.po.C..
+0990: c7 70 f1 db d0 6d da 8f                         .p...m..
+== Info: SSLv3, TLS handshake, Server key exchange (12):
+<= Recv SSL data, 331 bytes (0x14b)
+0000: 0c 00 01 47 03 00 17 41 04 70 21 7d c1 3b 36 88 ...G...A.p!}.;6.
+0010: cf 28 1f d5 a1 89 d1 1e 34 4e 7b f0 3a 57 57 e3 .(......4N{.:WW.
+0020: 54 8b 33 6a c5 7b 70 4f e9 0c 99 94 85 4c 9d e7 T.3j.{pO.....L..
+0030: c2 fe b7 8b ab 81 15 0e 26 4b f9 29 2d e0 f2 88 ........&K.)-...
+0040: ec 17 4d 38 18 39 62 c6 c2 01 00 37 99 21 cb dd ..M8.9b....7.!..
+0050: 91 f3 1b 18 fe 29 0c 68 00 bf 03 12 ca 36 cb be .....).h.....6..
+0060: 42 30 f2 25 1e 26 ec 7b e8 b8 ae 77 ef 81 44 e9 B0.%.&.{...w..D.
+0070: e2 df c0 40 b1 dc b6 f4 78 c5 c2 bb 9a 57 6a af ...@....x....Wj.
+0080: 4a 1a 48 33 6a 97 8f a5 01 ad 55 43 b8 6b 14 7b J.H3j.....UC.k.{
+0090: 93 ae 65 28 d5 11 33 0d 4e 62 8d a4 f8 cf 01 30 ..e(..3.Nb.....0
+00a0: 10 89 ba 4f b7 e0 e0 40 64 7d 94 d8 18 23 d9 80 ...O...@d}...#..
+00b0: 0a 4a 69 15 04 c2 07 13 85 f5 bd 75 52 74 4d f8 .Ji........uRtM.
+00c0: d2 90 96 71 74 f7 26 cb e3 e5 30 af c9 fe 93 8a ...qt.&...0.....
+00d0: fe 1e e5 fa d7 9b 1b 22 3b bc 0b 9f df f7 50 9b .......";.....P.
+00e0: e9 c8 4b 9b 9c 9f 00 d4 2f 85 3d 25 01 8c 41 17 ..K...../.=%..A.
+00f0: 18 c7 42 bf 8f af 79 fd 11 a8 60 c2 e1 0f bd 8f ..B...y...`.....
+0100: c8 79 cb dc 0a 2f 1f 6b 07 92 1d 77 59 41 b4 f9 .y.../.k...wYA..
+0110: 06 58 7c 5d 4d f1 51 eb e7 1b 30 2a de 33 8b c0 .X|]M.Q...0*.3..
+0120: f8 91 53 12 c3 95 22 ed d2 22 91 22 97 c6 bf cd ..S...".."."....
+0130: 89 be 7f 6b 15 52 94 c1 24 5b 15 7c b7 60 5b e5 ..k.R..$[.|.`[.
+0140: d4 75 1a 77 85 5f 5a 51 56 c8 70                .u.w._ZQV.p
+== Info: SSLv3, TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: 0e 00 00 00                                     ....
+== Info: SSLv3, TLS handshake, Client key exchange (16):
+=> Send SSL data, 70 bytes (0x46)
+0000: 10 00 00 42 41 04 7f 53 58 5b 8a af b9 c2 ee a8 ...BA.SX[......
+0010: 21 b1 97 38 90 47 97 e8 fc a5 8d 1e 02 e3 68 5d !..8.G........h]
+0020: 1d 8c 81 6c cf 0a ba 85 9f 3f 21 89 de 1a 90 2f ...l.....?!..../
+0030: 31 fa bb 71 37 72 f5 ac 22 11 e5 51 db 8e 7b 36 1..q7r.."..Q..{6
+0040: 1d 79 ac df 01 ac                               .y....
+== Info: SSLv3, TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: 01                                              .
+== Info: SSLv3, TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: 14 00 00 0c 0e d5 b5 98 45 f4 45 36 bd fb b4 68 ........E.E6...h
+== Info: SSLv3, TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: 01                                              .
+== Info: SSLv3, TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: 14 00 00 0c 21 c4 f5 4d 9c 83 ea 83 29 85 62 37 ....!..M....).b7
+== Info: SSL connection using ECDHE-RSA-RC4-SHA
+== Info: Server certificate:
+== Info: 	 subject: OU=Domain Control Validated; OU=Gandi Standard Wildcard SSL; CN=*.reddit.com
+== Info: 	 start date: 2014-04-08 00:00:00 GMT
+== Info: 	 expire date: 2015-04-08 23:59:59 GMT
+== Info: 	 subjectAltName: ssl.reddit.com matched
+== Info: 	 issuer: C=FR; O=GANDI SAS; CN=Gandi Standard SSL CA
+== Info: 	 SSL certificate verify ok.
+== Info: Server auth using Basic with user 'gixeMMJcD99TsQ'
+=> Send header, 246 bytes (0xf6)
+0000: 50 4f 53 54 20 2f 61 70 69 2f 76 31 2f 61 63 63 POST /api/v1/acc
+0010: 65 73 73 5f 74 6f 6b 65 6e 20 48 54 54 50 2f 31 ess_token HTTP/1
+0020: 2e 31 0d 0a 41 75 74 68 6f 72 69 7a 61 74 69 6f .1..Authorizatio
+0030: 6e 3a 20 42 61 73 69 63 20 5a 32 6c 34 5a 55 31 n: Basic Z2l4ZU1
+0040: 4e 53 6d 4e 45 4f 54 6c 55 63 31 45 36 61 48 64 NSmNEOTlUc1E6aHd
+0050: 36 5a 54 68 6d 54 33 42 35 55 46 56 36 4e 55 39 6ZThmT3B5UFV6NU9
+0060: 45 64 56 6c 42 61 6e 52 4c 53 30 39 33 61 48 6c EdVlBanRLS093aHl
+0070: 4e 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 63 N..User-Agent: c
+0080: 75 72 6c 2f 37 2e 32 39 2e 30 0d 0a 48 6f 73 74 url/7.29.0..Host
+0090: 3a 20 73 73 6c 2e 72 65 64 64 69 74 2e 63 6f 6d : ssl.reddit.com
+00a0: 0d 0a 41 63 63 65 70 74 3a 20 2a 2f 2a 0d 0a 43 ..Accept: */*..C
+00b0: 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20 35 ontent-Length: 5
+00c0: 37 0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 7..Content-Type:
+00d0: 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 78 2d 77  application/x-w
+00e0: 77 77 2d 66 6f 72 6d 2d 75 72 6c 65 6e 63 6f 64 ww-form-urlencod
+00f0: 65 64 0d 0a 0d 0a                               ed....
+=> Send data, 57 bytes (0x39)
+0000: 67 72 61 6e 74 5f 74 79 70 65 3d 70 61 73 73 77 grant_type=passw
+0010: 6f 72 64 26 75 73 65 72 6e 61 6d 65 3d 6b 65 6e ord&username=ken
+0020: 73 61 69 31 38 37 26 70 61 73 73 77 6f 72 64 3d sai187&password=
+0030: 74 68 65 4d 61 74 72 31 78                      theMatr1x
+== Info: upload completely sent off: 57 out of 57 bytes
+<= Recv header, 17 bytes (0x11)
+0000: 48 54 54 50 2f 31 2e 31 20 32 30 30 20 4f 4b 0d HTTP/1.1 200 OK.
+0010: 0a                                              .
+<= Recv header, 37 bytes (0x25)
+0000: 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 34 20 4a 75 Date: Mon, 14 Ju
+0010: 6c 20 32 30 31 34 20 31 37 3a 33 33 3a 35 36 20 l 2014 17:33:56 
+0020: 47 4d 54 0d 0a                                  GMT..
+<= Recv header, 19 bytes (0x13)
+0000: 43 6f 6e 6e 65 63 74 69 6f 6e 3a 20 63 6c 6f 73 Connection: clos
+0010: 65 0d 0a                                        e..
+<= Recv header, 47 bytes (0x2f)
+0000: 63 6f 6e 74 65 6e 74 2d 74 79 70 65 3a 20 61 70 content-type: ap
+0010: 70 6c 69 63 61 74 69 6f 6e 2f 6a 73 6f 6e 3b 20 plication/json; 
+0020: 63 68 61 72 73 65 74 3d 55 54 46 2d 38 0d 0a    charset=UTF-8..
+<= Recv header, 20 bytes (0x14)
+0000: 63 6f 6e 74 65 6e 74 2d 6c 65 6e 67 74 68 3a 20 content-length: 
+0010: 32 36 0d 0a                                     26..
+<= Recv header, 29 bytes (0x1d)
+0000: 78 2d 66 72 61 6d 65 2d 6f 70 74 69 6f 6e 73 3a x-frame-options:
+0010: 20 53 41 4d 45 4f 52 49 47 49 4e 0d 0a           SAMEORIGIN..
+<= Recv header, 33 bytes (0x21)
+0000: 78 2d 63 6f 6e 74 65 6e 74 2d 74 79 70 65 2d 6f x-content-type-o
+0010: 70 74 69 6f 6e 73 3a 20 6e 6f 73 6e 69 66 66 0d ptions: nosniff.
+0020: 0a                                              .
+<= Recv header, 33 bytes (0x21)
+0000: 78 2d 78 73 73 2d 70 72 6f 74 65 63 74 69 6f 6e x-xss-protection
+0010: 3a 20 31 3b 20 6d 6f 64 65 3d 62 6c 6f 63 6b 0d : 1; mode=block.
+0020: 0a                                              .
+<= Recv header, 28 bytes (0x1c)
+0000: 78 2d 72 61 74 65 6c 69 6d 69 74 2d 72 65 6d 61 x-ratelimit-rema
+0010: 69 6e 69 6e 67 3a 20 32 39 35 0d 0a             ining: 295..
+<= Recv header, 21 bytes (0x15)
+0000: 78 2d 72 61 74 65 6c 69 6d 69 74 2d 75 73 65 64 x-ratelimit-used
+0010: 3a 20 35 0d 0a                                  : 5..
+<= Recv header, 24 bytes (0x18)
+0000: 78 2d 72 61 74 65 6c 69 6d 69 74 2d 72 65 73 65 x-ratelimit-rese
+0010: 74 3a 20 33 36 35 0d 0a                         t: 365..
+<= Recv header, 39 bytes (0x27)
+0000: 53 65 72 76 65 72 3a 20 27 3b 20 44 52 4f 50 20 Server: '; DROP 
+0010: 54 41 42 4c 45 20 73 65 72 76 65 72 74 79 70 65 TABLE servertype
+0020: 73 3b 20 2d 2d 0d 0a                            s; --..
+<= Recv header, 2 bytes (0x2)
+0000: 0d 0a                                           ..
+<= Recv data, 26 bytes (0x1a)
+0000: 7b 22 65 72 72 6f 72 22 3a 20 22 69 6e 76 61 6c {"error": "inval
+0010: 69 64 5f 67 72 61 6e 74 22 7d                   id_grant"}
+== Info: Closing connection 0
+== Info: SSLv3, TLS alert, Client hello (1):
+=> Send SSL data, 2 bytes (0x2)
+0000: 01 00                                           ..
