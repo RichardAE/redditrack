@@ -14,10 +14,13 @@
 ActiveRecord::Schema.define(version: 20140713155853) do
 
   create_table "users", force: true do |t|
-    t.string   "name",                default: "", null: false
-    t.string   "email",               default: "", null: false
-    t.string   "encrypted_password",  default: "", null: false
-    t.string   "token",               default: "", null: false
+    t.string   "name",                default: "",    null: false
+    t.string   "email",               default: "",    null: false
+    t.string   "encrypted_password",  default: "",    null: false
+    t.string   "token",               default: "",    null: false
+    t.string   "refresh_token",       default: "",    null: false
+    t.boolean  "has_refreshed",       default: false, null: false
+    t.datetime "token_signed_at"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",       default: 0
     t.datetime "current_sign_in_at"

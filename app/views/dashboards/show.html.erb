@@ -1,1 +1,11 @@
-<%= current_user.inspect %>
+<%= render 'search_subs' %><br>
+
+<div id="dashboard_outer">
+  <div id="subscribed_subs">
+    <%= render 'subscribed_subs', :subs => @dashboard.subscribed_subs %>
+  </div>
+
+  <div id="links_content">
+    <%= render 'shared/reddit_links', :links => @dashboard.reddit_front_page %>
+  </div>
+</div>

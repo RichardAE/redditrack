@@ -43,8 +43,6 @@ module RedditKit
 
     attr_reader :username
     attr_reader :current_user
-    attr_reader :cookie
-    attr_reader :modhash
 
     attr_accessor :api_endpoint
     attr_accessor :authentication_endpoint
@@ -52,13 +50,9 @@ module RedditKit
     attr_accessor :middleware
     attr_accessor :token
 
-    def initialize(username = nil, password = nil, token = "notoken")
-      @username = username
-      @password = password
-      @token = token
-
-      @cookie = nil
-      @modhash = nil
+    def initialize(user = nil)
+      @username = user.name
+      @token = user.token
     end
 
     def api_endpoint
@@ -105,8 +99,12 @@ module RedditKit
     end
 
     def request(method, path, parameters = {}, request_connection)
+      if signed_in?
         request = authenticated_request_configuration(method, path, parameters)
         request_connection.send(method.to_sym, path, parameters, &request).env
+      else
+        raise RedditKit::RequestError
+      end
     rescue Faraday::Error::ClientError
       raise RedditKit::RequestError
     end

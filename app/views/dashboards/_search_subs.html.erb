@@ -1,0 +1,9 @@
+Search Subs
+<%= form_tag(new_sub_search_path, method: :get, remote: true) do |form| %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Run Search" %>
+<% end %>
+<br>
+<div id="sub_search_results">
+
+</div>

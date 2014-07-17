@@ -1,0 +1,35 @@
+<% if !links.first.nil? %>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center">#Score</th>
+      <th>Content</th>
+      <th>Details</th>
+      <th>Track</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% links.each do |link| %>
+    <tr>
+      <td class="text-center"><%= link.attributes[:score] %></td>
+      <td>
+        <%= link.title %><br />
+        <%= trim_content(link.selftext, 100) %><br />
+      </td>
+      <td>
+        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago<br />
+        by <%= link.author %><br />
+        <%= link.attributes[:num_comments] %> comments
+        <%#= link.inspect %>
+      </td>
+      <td id="post_item_tracking_#{link.id}">
+        
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+  Sorry no results were returned. Please try tweaking your search paramters.
+<% end %>
+

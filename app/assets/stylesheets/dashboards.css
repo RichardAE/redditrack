@@ -1,0 +1,16 @@
+#dashboard_outer
+{
+  width: 1000px;
+}
+
+#subscribed_subs
+{
+  width: 200px;
+  float:left;
+}
+
+#links_content
+{
+  width: 800px;
+  float:left;
+}

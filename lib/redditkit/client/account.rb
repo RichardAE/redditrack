@@ -27,7 +27,7 @@ module RedditKit
       #
       # @return [Boolean]
       def signed_in?
-        !!@modhash and !!@cookie
+        !!@username
       end
 
       # Sign the current user out.

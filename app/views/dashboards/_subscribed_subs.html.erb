@@ -1,0 +1,8 @@
+<% subs.each do |sub| %>
+  <div>
+   <%= sub.name %> <%= form_tag(sub_path, method: :delete, :remote => true) do |form| %>
+      <%= hidden_field_tag :subreddit, sub.full_name %>
+      <%= submit_tag "UnSubscribe", data: { :disable_with => 'Working...' } %>
+    <% end %>
+  </div>
+<% end %>

@@ -227,7 +227,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 
-  config.omniauth :reddit, ENV["REDDIT_KEY"], ENV["REDDIT_SECRET"], scope: "identity,mysubreddits,read,save,submit,subscribe,vote"
+  config.omniauth :reddit, ENV["REDDIT_KEY"], ENV["REDDIT_SECRET"], scope: "identity,mysubreddits,read,save,submit,subscribe,vote", :duration => 'permanent'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

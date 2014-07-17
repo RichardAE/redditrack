@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "homes#show"
 
   resource :dashboard, only: [:show]
+  resource :sub, only: [:create, :destroy]
+  resource :sub_search, only: [:new, :create, :destroy]
 end

@@ -22,8 +22,8 @@ module RedditTrack
 
     config.autoload_paths += %W(
       #{config.root}/services
-      #{config.root}/lib/redditkit/client
-      #{config.root}/lib/redditkit/response
+      #{config.root}/services/reddit
+      #{config.root}/facades
     )
   end
 end
