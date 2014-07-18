@@ -2,10 +2,22 @@
 
 <div id="dashboard_outer">
   <div id="subscribed_subs">
-    <%= render 'subscribed_subs', :subs => @dashboard.subscribed_subs %>
+    <%= render 'subscribed_subs', subs: @dashboard.subscribed_subs %>
   </div>
 
-  <div id="links_content">
-    <%= render 'shared/reddit_links', :links => @dashboard.reddit_front_page %>
+  <div id="links_outer">
+    <div id="links_search">
+      <%= render 'shared/search_filter', subs: @dashboard.subs_for_search %>
+    </div>
+
+    <div id="links_content">
+      <%= render 'shared/reddit_links', links: @dashboard.reddit_front_page, :track => @dashboard.build_track %>
+    </div>
+  </div>
+
+  <div id="tracks_outer">
+    <div id="tracks_content">
+      <%= render @dashboard.user_tracks %>
+    </div>
   </div>
 </div>

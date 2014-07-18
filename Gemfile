@@ -43,9 +43,15 @@ gem 'omniauth-reddit', :git => 'git://github.com/jackdempsey/omniauth-reddit.git
 
 gem "figaro"
 
-gem "typhoeus"
+# gem "typhoeus"
+
+gem 'httparty'
 
 gem "htmlentities"
+
+gem 'lazybox'
+
+gem 'gon' 
 
 # gem 'redditkit', :git => 'https://github.com/RichardAE/RedditKit.rb.git'
 

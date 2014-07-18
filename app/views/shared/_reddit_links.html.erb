@@ -13,17 +13,23 @@
     <tr>
       <td class="text-center"><%= link.attributes[:score] %></td>
       <td>
-        <%= link.title %><br />
-        <%= trim_content(link.selftext, 100) %><br />
+      
+        <%= link_to link.title, url_from_permalink(link.attributes[:permalink]), target: "_blank" %><br>
+        <%= trim_content(link.selftext, 100) %><br>
       </td>
       <td>
-        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago<br />
-        by <%= link.author %><br />
+        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago<br>
+        by <%= link.author %><br>
         <%= link.attributes[:num_comments] %> comments
         <%#= link.inspect %>
       </td>
-      <td id="post_item_tracking_#{link.id}">
-        
+      <td id="link_tracking_#{link.id}">
+        <%= form_for([current_user, track], method: :post, remote: true) do |form| %>
+          <%= form.hidden_field :title, value: link.title %>
+          <%= form.hidden_field :name, value: link.attributes[:name] %>
+          <%= form.hidden_field :score, value: link.score %>
+          <%= form.submit "Track This" %>
+        <% end %>
       </td>
     </tr>
     <% end %>

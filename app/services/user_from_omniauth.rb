@@ -17,15 +17,15 @@ class UserFromOmniauth
 
   def create_new_user
     User.create(
-      :provider => @auth.provider, 
-      :uid => @auth.uid, 
-      :name => @auth.info.name,
-      :email => "reddit#{rand(0..500000).ceil}@reddittool.com", 
-      :password => Devise.friendly_token[0,20]
+      provider: @auth.provider, 
+      uid: @auth.uid, 
+      name: @auth.info.name,
+      email: "reddit#{rand(0..500000).ceil}@reddittool.com", 
+      password: Devise.friendly_token[0,20]
     )
   end
 
   def update_token(user)
-    user.update_attributes(:token => @auth.credentials.token, :refresh_token => @auth.credentials.refresh_token, :has_refreshed => false, :token_signed_at => Time.now)
+    user.update_attributes(token: @auth.credentials.token, refresh_token: @auth.credentials.refresh_token, token_signed_at: Time.now)
   end
 end

@@ -1,0 +1,12 @@
+Search Links<br>
+<%= form_tag(link_search_path, method: :post, remote: true) do |form| %>
+     Time | Sort | Query |<br />
+    Sub | <%= select_tag 'search[subreddit]', options_for_select(subs), {prompt: "All"} %>
+
+    | By: <%= select_tag 'search[sort]', options_for_select([['Relevance', "relevance"], ['New', "new"], ['Hot', "hot"], ['Top', "top"]]) %>
+
+    | When: <%= select_tag 'search[time]', options_for_select([['Day', "day"], ['Week', "week"], ['Month', "month"], ['Hour', "hour"]]) %>
+
+    | What: <%= text_field_tag 'search[term]', nil, placeholder: 'Enter search term...' %> | <%= submit_tag "Search this sub", disable_with: "Working..." %>
+<% end %>
+<br>

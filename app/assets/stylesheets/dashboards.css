@@ -1,6 +1,6 @@
 #dashboard_outer
 {
-  width: 1000px;
+  width: 1400px;
 }
 
 #subscribed_subs
@@ -13,4 +13,10 @@
 {
   width: 800px;
   float:left;
+}
+
+#tracks_outer
+{
+  width: 300px;
+  float: left;
 }

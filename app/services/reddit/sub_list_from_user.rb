@@ -14,7 +14,7 @@ class Reddit::SubListFromUser < Reddit::Shared
   end 
 
   def user_subs_from_reddit
-    @client.subscribed_subreddits :limit => 100
+    @client.subscribed_subreddits limit: 100
   end
 
 end
