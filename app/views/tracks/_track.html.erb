@@ -1,3 +1,5 @@
 <%= div_for(track) do |div|  %>
-  <div id="track_item_score_<%= track.id %>"><%= track.score %></div> | <%= track.title %>
+  <div id="track_item_score_<%= track.id %>" <%= check_hit_target(track) %>><%= track.score %></div> | <%= track.title %> | target:  <%= track.target_score %>
+
+  <%= link_to "Delete", user_track_path(current_user, track), method: :delete, :remote => true %>
 <% end %>

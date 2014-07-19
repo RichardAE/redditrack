@@ -1,12 +1,12 @@
-class Reddit::SubRemove  < Reddit::Shared
+class Reddit::SubUnsubscribe  < Reddit::Shared
   def initialize(user, subreddit)
     @user = user
     @client = create_client(user)
     @subreddit = subreddit
-    unsubscribe_from_sub
+    process
   end
 
-  def unsubscribe_from_sub
+  def process
     @unsubscribe = @client.unsubscribe("#{@subreddit}")
   end
 

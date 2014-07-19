@@ -1,12 +1,12 @@
-class Reddit::SubAdd < Reddit::Shared
+class Reddit::SubSubscribe < Reddit::Shared
   def initialize(user, subreddit)
     @user = user
     @client = create_client(user)
     @subreddit = subreddit
-    subscribe_to_sub
+    process
   end
 
-  def subscribe_to_sub
+  def process
     @subscribe = @client.subscribe("#{@subreddit}")
   end
 

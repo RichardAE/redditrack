@@ -3,12 +3,13 @@ class Reddit::UpdateTrackData < Reddit::Shared
     @user = user
     @client = create_client(user)
     @track_id = track_id
+    process
   end
 
-  def update_track_data
-    link = Reddit::SingleLink.new(@user, @track_id).retrieve
+  def process
+    link = Reddit::SingleLink.new(@client, @track_id).retrieve
     track = Track.find_by_name(@track_id)
-    track.update_attributes(score: link.score)
+    track.update_attributes(score: link.score, last_score: track.score)
     track 
   end
 end

@@ -3,7 +3,7 @@ class Reddit::SubListFromUser < Reddit::Shared
     @client = create_client(user)
   end
 
-  def user_subscribed_subs
+  def retrieve
     @subreddits = sort_subs_by_name(user_subs_from_reddit)
   end
 

@@ -1,8 +1,7 @@
 class Reddit::SingleLink < Reddit::Shared
-  def initialize(user, link_name)
-    @user = user 
+  def initialize(client, link_name)
     @link_name = link_name
-    @client = create_client(@user)
+    @client = client
   end
 
   def retrieve

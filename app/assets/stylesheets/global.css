@@ -1,4 +1,5 @@
-#container
-{
-  width: 100%;
-}
+.hit_target { color: green; }
+
+.rising { color: gray; }
+
+.falling { color: red; }

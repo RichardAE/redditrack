@@ -2,7 +2,7 @@
   <div>
     <%= sub.display_name %> 
 
-    <%= form_tag(sub_path, method: :post, remote: true) do |form| %>
+    <%= form_tag(subs_path, method: :post, remote: true) do |form| %>
       <%= hidden_field_tag :subreddit, sub.full_name %>
       <%= submit_tag "Subscribe", data: { disable_with: 'Working...' } %>
     <% end %>

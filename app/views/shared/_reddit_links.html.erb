@@ -11,6 +11,10 @@
   <tbody>
     <% links.each do |link| %>
     <tr>
+      <td id="<%= div_id('link_vote', link.full_name) %>" class="text-center">
+        <%= vote_up_link(link) %>
+      </td>
+      <td>
       <td class="text-center"><%= link.attributes[:score] %></td>
       <td>
       
@@ -23,13 +27,21 @@
         <%= link.attributes[:num_comments] %> comments
         <%#= link.inspect %>
       </td>
-      <td id="link_tracking_#{link.id}">
-        <%= form_for([current_user, track], method: :post, remote: true) do |form| %>
-          <%= form.hidden_field :title, value: link.title %>
-          <%= form.hidden_field :name, value: link.attributes[:name] %>
-          <%= form.hidden_field :score, value: link.score %>
-          <%= form.submit "Track This" %>
-        <% end %>
+      <td id="<%= div_id('link_tracking', link.full_name) %>">
+        <div id="<%= div_id('link_tracked', link.full_name) %>" <% if !check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
+          Tracking
+        </div>
+        <div id="<%= div_id('link_track_form', link.full_name) %>" <% if check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
+            <%= form_for([current_user, track], method: :post, remote: true) do |form| %>
+            <%= form.hidden_field :title, value: link.title %>
+            <%= form.hidden_field :name, value: link.attributes[:name] %>
+            <%= form.hidden_field :score, value: link.score %>
+            <%= form.hidden_field :last_score, value: link.score %>
+
+            <%= form.text_field :target_score, value: link.score %>
+            <%= form.submit "Track This" %>
+          <% end %>
+        </div>
       </td>
     </tr>
     <% end %>

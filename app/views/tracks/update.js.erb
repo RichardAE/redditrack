@@ -1,1 +1,11 @@
-$('#track_item_score_<%= @track.id %>').html("<%= @track.score %>");
+$('#<%= div_id("track_item_score", @track.id) %>').html("<%= @track.score %>");
+
+<% if @track.score <= @track.target_score %>
+  <% if @track.score <= @track.last_score %>
+    $('#<%= div_id("track_item_score", @track.id) %>').css('color', 'red');
+  <% else %>
+    $('#<%= div_id("track_item_score", @track.id) %>').css('color', 'yellow');
+  <% end %>
+<% else %>
+  $('#<%= div_id("track_item_score", @track.id) %>').css('color', 'green');
+<% end %>

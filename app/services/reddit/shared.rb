@@ -4,6 +4,6 @@ class Reddit::Shared
   end
 
   def user_subs_list(user)
-    Reddit::SubListFromUser.new(user).user_subscribed_subs
+    Reddit::SubListFromUser.new(user).retrieve
   end
 end

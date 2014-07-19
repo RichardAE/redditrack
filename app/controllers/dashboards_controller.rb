@@ -8,13 +8,9 @@ class DashboardsController < ApplicationController
 
   private
 
-  def track_names_array
-    current_user.tracks.map {|u| u.name }
-  end
-
   def pass_data_to_js
     gon.user_id = current_user.id
-    gon.user_tracks = track_names_array
+    gon.user_tracks = @dashboard.track_names_array
   end
 
 

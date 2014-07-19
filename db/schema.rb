@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717220107) do
+ActiveRecord::Schema.define(version: 20140719130847) do
 
   create_table "tracks", force: true do |t|
-    t.string   "title",      default: "", null: false
-    t.string   "name",       default: "", null: false
-    t.integer  "score",      default: 0,  null: false
+    t.string   "title",        default: "",    null: false
+    t.string   "name",         default: "",    null: false
+    t.integer  "score",        default: 0,     null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "target_score"
+    t.boolean  "hit_target",   default: false, null: false
+    t.integer  "last_score",   default: 0,     null: false
   end
 
   add_index "tracks", ["user_id"], name: "index_tracks_on_user_id"

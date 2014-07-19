@@ -3,7 +3,7 @@ class Reddit::LinksFrontPage < Reddit::Shared
     @client = create_client(user)
   end
 
-  def front_page
+  def retrieve
     @links = @client.front_page
   end
 end

@@ -19,7 +19,7 @@ class Reddit::LinksSearch < Reddit::Shared
   end
 
   def build_search_options
-    options = { limit: 10, sort: @search[:sort], time: @search[:time] }
+    options = { limit: 50, sort: @search[:sort], time: @search[:time] }
     check_sub_search(options)
     options
   end
