@@ -30,6 +30,6 @@ module ApplicationHelper
   private
 
   def generate_vote_btn(link)
-    button_to "^^", vote_path(id: link.full_name), :method => :put, remote: true
+    link_to "^^", vote_path(id: link.full_name), :method => :put, remote: true
   end
 end

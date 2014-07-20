@@ -1,2 +1,11 @@
 $('#track_<%= @track.id %>').remove();
+
+// Check if track is already displayed, if so change tro untracked
+if ($('#<%= div_id("link_tracked", @track.name) %>').length > 0)
+{
+  $('#<%= div_id("link_tracked", @track.name) %>').hide();
+  $('#<%= div_id("link_track_form", @track.name) %>').show();
+}
+
+// Remove from tracks array to prevent AJAX update for deleted tracks
 remove_from_array(gon.user_tracks, '<%= @track.name %>');

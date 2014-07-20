@@ -1,5 +1,6 @@
 class Reddit::LinksSearch < Reddit::Shared
   def initialize(user, search)
+    @user = user
     @client = create_client(user)
     @search = search
   end
@@ -10,6 +11,10 @@ class Reddit::LinksSearch < Reddit::Shared
 
   def build_track
     Track.new
+  end
+
+  def track_names_array
+    @user.tracks.map {|t| t.name }
   end
 
   private

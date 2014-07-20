@@ -2,9 +2,9 @@
 <table class="table">
   <thead>
     <tr>
-      <th class="text-center">#Score</th>
+      <th></th>
+      <th>Score</th>
       <th>Content</th>
-      <th>Details</th>
       <th>Track</th>
     </tr>
   </thead>
@@ -15,17 +15,14 @@
         <%= vote_up_link(link) %>
       </td>
       <td>
-      <td class="text-center"><%= link.attributes[:score] %></td>
+        <%= link.attributes[:score] %></td>
       <td>
-      
-        <%= link_to link.title, url_from_permalink(link.attributes[:permalink]), target: "_blank" %><br>
-        <%= trim_content(link.selftext, 100) %><br>
-      </td>
-      <td>
-        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago<br>
-        by <%= link.author %><br>
-        <%= link.attributes[:num_comments] %> comments
-        <%#= link.inspect %>
+        <%= link_to link.title, url_from_permalink(link.attributes[:permalink]), target: "_blank" %>
+        <div class="link_details">
+        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago ||
+          by <%= link.author %> ||
+          <%= link.attributes[:num_comments] %> comments
+        </div>
       </td>
       <td id="<%= div_id('link_tracking', link.full_name) %>">
         <div id="<%= div_id('link_tracked', link.full_name) %>" <% if !check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>

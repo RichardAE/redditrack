@@ -1,4 +1,6 @@
+$('#track_added').removeClass('hide');
 $('#tracks_content').append("<%= j render 'track', track: @track %>");
 $('#link_track_form_<%= @track.name %>').hide();
 $('#link_tracked_<%= @track.name %>').html("<%= j render 'track_added', track: @track %>").show();
 gon.user_tracks.push("<%= @track.name %>");
+window.setTimeout("$('#track_added').addClass('hide');", 3000);
