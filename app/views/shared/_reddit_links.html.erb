@@ -14,30 +14,27 @@
       <td id="<%= div_id('link_vote', link.full_name) %>" class="text-center">
         <%= vote_up_link(link) %>
       </td>
-      <td>
+      <td class="link_score">
         <%= link.attributes[:score] %></td>
       <td>
-        <%= link_to link.title, url_from_permalink(link.attributes[:permalink]), target: "_blank" %>
+        <span class="link_title">
+          <%= link_to trim_content(link.title, 160), url_from_permalink(link.attributes[:permalink]), target: "_blank" %>
+        </span>
         <div class="link_details">
-        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago ||
-          by <%= link.author %> ||
-          <%= link.attributes[:num_comments] %> comments
+            <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago by <%= link.author %>.&nbsp;&nbsp;<%= link.attributes[:num_comments] %> <i class="icon-comment"></i> 
         </div>
       </td>
       <td id="<%= div_id('link_tracking', link.full_name) %>">
         <div id="<%= div_id('link_tracked', link.full_name) %>" <% if !check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
-          Tracking
+          <%= render 'tracks/track_added' %>
         </div>
         <div id="<%= div_id('link_track_form', link.full_name) %>" <% if check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
-            <%= form_for([current_user, track], method: :post, remote: true) do |form| %>
-            <%= form.hidden_field :title, value: link.title %>
-            <%= form.hidden_field :name, value: link.attributes[:name] %>
-            <%= form.hidden_field :score, value: link.score %>
-            <%= form.hidden_field :last_score, value: link.score %>
-
-            <%= form.text_field :target_score, value: link.score %>
-            <%= form.submit "Track This" %>
-          <% end %>
+          <div class="popover-markup center"> <%= button_tag "Track", class: "btn btn-info smt trigger" %>
+              <div style="width: 150px;" class="head hide">Track this link</div>
+              <div style="width: 150px;" class="content hide">
+                  <%= render 'tracks/new_track', link: link, track: track %>
+              </div>
+          </div>
         </div>
       </td>
     </tr>
@@ -47,4 +44,3 @@
 <% else %>
   Sorry no results were returned. Please try tweaking your search paramters.
 <% end %>
-

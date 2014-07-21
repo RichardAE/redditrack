@@ -1,6 +1,6 @@
 $('#track_<%= @track.id %>').remove();
 
-// Check if track is already displayed, if so change tro untracked
+// Check if track is already displayed, if so change to untracked
 if ($('#<%= div_id("link_tracked", @track.name) %>').length > 0)
 {
   $('#<%= div_id("link_tracked", @track.name) %>').hide();

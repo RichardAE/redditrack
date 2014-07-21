@@ -11,35 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140719130847) do
+ActiveRecord::Schema.define(version: 20140721172557) do
 
   create_table "tracks", force: true do |t|
-    t.string   "title",        default: "",    null: false
-    t.string   "name",         default: "",    null: false
-    t.integer  "score",        default: 0,     null: false
+    t.string   "title",        default: "", null: false
+    t.string   "name",         default: "", null: false
+    t.integer  "score",        default: 0,  null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "target_score"
-    t.boolean  "hit_target",   default: false, null: false
-    t.integer  "last_score",   default: 0,     null: false
+    t.integer  "hit_target",   default: 0,  null: false
+    t.integer  "first_score",  default: 0,  null: false
   end
 
   add_index "tracks", ["user_id"], name: "index_tracks_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "name",                default: "", null: false
-    t.string   "email",               default: "", null: false
-    t.string   "encrypted_password",  default: "", null: false
-    t.string   "token",               default: "", null: false
-    t.string   "refresh_token",       default: "", null: false
+    t.string   "name",                default: "",    null: false
+    t.string   "email",               default: "",    null: false
+    t.string   "encrypted_password",  default: "",    null: false
+    t.string   "token",               default: "",    null: false
+    t.string   "refresh_token",       default: "",    null: false
     t.datetime "token_signed_at"
     t.datetime "remember_created_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
-    t.integer  "tracks_count",        default: 0,  null: false
+    t.integer  "tracks_count",        default: 0,     null: false
+    t.boolean  "notify_me",           default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

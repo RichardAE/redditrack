@@ -1,1 +1,5 @@
+$('#results_header').html('<%= get_search_header(params[:search][:subreddit]) %>');
+
 $("#links_content").html("<%= j render 'shared/reddit_links', links: @search.links_by_term, :track => @search.build_track, user_tracks: @search.track_names_array %>");
+
+bind_popovers_on_links();

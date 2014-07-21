@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def only_respond_to_ajax
     respond_to do |format|
-      format.html {  }
+      format.html { redirect_to dashboard_path }
       format.js   {}
     end
   end

@@ -1,5 +1,10 @@
-<% subs.each do |sub| %>
-  <div>
-   <%= sub.name %> - <%= link_to "Unsubscribe", sub_path(:id => sub.full_name), method: :delete, :remote => true %>
-  </div>
-<% end %>
+<div id="subscribed_subs">
+  <% subs.each do |sub| %>
+    <div id="sub_<%= sub.full_name %>">
+      <%= sub.name %>&nbsp;&nbsp;
+      <%= link_to sub_path(:id => sub.full_name), method: :delete, :remote => true do %>
+      <i class="icon-remove"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

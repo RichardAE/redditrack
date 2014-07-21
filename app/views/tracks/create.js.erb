@@ -1,6 +1,14 @@
-$('#track_added').removeClass('hide');
-$('#tracks_content').append("<%= j render 'track', track: @track %>");
+$('#links_nolinks').hide();
+
+// Append new track to My Tracks
+$('#tracks_content tr:last').after("<%= j render 'track', track: @track %>");
+
+// Hide track submission form and show tracked status
 $('#link_track_form_<%= @track.name %>').hide();
 $('#link_tracked_<%= @track.name %>').html("<%= j render 'track_added', track: @track %>").show();
+
+// Re-add track to the end of the tracks array
 gon.user_tracks.push("<%= @track.name %>");
-window.setTimeout("$('#track_added').addClass('hide');", 3000);
+
+$('.popover-title').hide();
+$('.popover-content').hide();

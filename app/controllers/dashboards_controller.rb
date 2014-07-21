@@ -12,6 +12,4 @@ class DashboardsController < ApplicationController
     gon.user_id = current_user.id
     gon.user_tracks = @dashboard.track_names_array
   end
-
-
 end

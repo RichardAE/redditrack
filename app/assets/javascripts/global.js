@@ -13,7 +13,7 @@ function update_tracks()
         gon.user_tracks.push(link_id);
       });
     }
-    setTimeout(update_worker, 5000);
+    setTimeout(update_worker, 10000);
   })();
 }
 
@@ -28,10 +28,35 @@ function remove_from_array(arr) {
     return arr;
 }
 
+function bind_popovers_on_links()
+{
+  $('.popover-markup>.trigger').popover({
+      html: true,
+      title: function () {
+          return $(this).parent().find('.head').html();
+      },
+      content: function () {
+          return $(this).parent().find('.content').html();
+      },
+      placement: "left"
+  });
+}
+
+function bind_click_clear()
+{
+  $('.click_clear').on("click", function(event)
+  {
+    $(this).val('');
+  });
+}
+
 $(function() {
+  bind_popovers_on_links();
+  bind_click_clear();
+
   // Check we're on the dashboard, then start update worker
   if(typeof(gon) != 'undefined')
   {
-    window.setTimeout("update_tracks();", 5000);
+    window.setTimeout("update_tracks();", 10000);
   }
 });

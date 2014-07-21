@@ -1,22 +1,16 @@
 class TracksController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only_respond_to_ajax
 
   def create
     @track = create_track
-
-    only_respond_to_ajax
   end
 
   def update
     @track = Reddit::UpdateTrackData.new(current_user, params[:id]).process
-
-    only_respond_to_ajax
   end
 
   def destroy
     @track = destroy_track
-
-    only_respond_to_ajax
   end
 
   private
@@ -30,6 +24,6 @@ class TracksController < ApplicationController
   end
 
   def track_params
-    params.require(:track).permit(:title, :name, :score, :last_score, :target_score)
+    params.require(:track).permit(:title, :name, :score, :first_score, :target_score)
   end
 end

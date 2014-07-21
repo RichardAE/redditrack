@@ -1,0 +1,11 @@
+<div>
+  <%= form_tag(subs_path, method: :post, remote: true) do |form| %>
+    <%= hidden_field_tag :subreddit, sub.full_name %>
+
+    <% if !subscribed %> 
+      <span class="bold"><%= sub.display_name %></span>&nbsp;&nbsp;<i onclick="$(this).parent().submit();$(this).parent().parent().remove();" class="iconhover icon-arrow-right"></i> 
+    <% else %>
+      <%= sub.display_name %>
+    <% end %>
+  <% end %>
+</div>

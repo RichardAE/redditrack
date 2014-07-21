@@ -1,34 +1,53 @@
-<div class="row col-lg-12">
-  <div class="col-lg-8">
-    <%= render 'search_subs' %>
-
-    <div id="subscribed_subs">
-      <%= render 'subscribed_subs', subs: @dashboard.subscribed_subs %>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-12">
+<div class="row">
+  <div class="col-md-8 col-xs-12">
+    <div class="widget">
+      <div class="widget-header"> 
+        <i class="icon-plane"></i>
+        <h3>Search Reddit</h3>
+      </div>
+      
+      <div class="widget-content">
         <div id="links_search">
           <%= render 'shared/search_filter', subs: @dashboard.subs_for_search %>
         </div>
+      </div>  
+    </div> 
 
+    <div class="widget">
+      <div class="widget-header"> 
+        <i class="icon-list"></i>
+        <h3 id="results_header">Reddit front page</h3>
+      </div>
+      
+      <div class="widget-content">
         <div id="links_content">
           <%= render 'shared/reddit_links', links: @dashboard.reddit_front_page, track: @dashboard.build_track, user_tracks: @dashboard.track_names_array %>
-        </div>
-      </div>
-    </div>
+        </div> 
+      </div>  
+    </div> 
   </div>
 
-  <div class="col-lg-4">
-    <div class="well sidebar-nav">
-      <h3>Your Tracks</h3>
-      <div id="tracks_content">
-        <%= render @dashboard.user_tracks %>
+  <div class="col-md-4 col-xs-12">
+    <div class="widget">
+      <div class="widget-header"> 
+        <i class="icon-bookmark"></i>
+        <h3>My Tracks</h3>
       </div>
-    </div>
-
-    <div id="track_added" class="sidebar-nav affix hide">
-      Your Track has been added ^^
-    </div>
+      
+      <div class="widget-content">
+        <%= render 'shared/tracks', tracks: @dashboard.user_tracks %>
+      </div>  
+    </div>  
+    <div class="widget">
+      <div class="widget-header"> 
+        <i class="icon-star"></i>
+        <h3>My SubReddits</h3>
+      </div>
+      
+      <div class="widget-content">
+        <%= render 'search_subs' %><br>
+        <%= render 'subscribed_subs', subs: @dashboard.subscribed_subs %>
+      </div>  
+    </div>  
   </div>
 </div>

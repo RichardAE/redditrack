@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def vote_up_link(link)
     if !link.attributes[:likes].nil?
-      "Voted"
+      "<i class=\"icon-thumbs-up\"></i>".html_safe
     else
       generate_vote_btn(link)
     end
@@ -21,15 +21,39 @@ module ApplicationHelper
 
   def check_hit_target(track)
     if track.score >= track.target_score
-      "class=hit_target"
+      "hit_target"
     else
-      "class=rising"
+      check_rise_or_fall(track)
+    end
+  end
+
+  def get_search_header(sub)
+    if sub.blank?
+      "Links from all subs"
+    else
+      "Links from #{sub}"
+    end
+  end
+
+  def trim_content(text, limit)
+    if !text.blank?
+      TrimContentWithWords.trimmed_content(text, limit)
     end
   end
 
   private
 
+  def check_rise_or_fall(track)
+    if track.score >= track.first_score
+      "rising"
+    else
+      "falling"
+    end
+  end
+
   def generate_vote_btn(link)
-    link_to "^^", vote_path(id: link.full_name), :method => :put, remote: true
+    link_to vote_path(id: link.full_name), method: :put, title: "Upvote", remote: true do 
+      "<i class=\"icon-arrow-up\"></i>".html_safe
+    end
   end
 end

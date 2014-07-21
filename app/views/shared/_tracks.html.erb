@@ -1,0 +1,23 @@
+<table id="tracks_content" class="table">
+  <thead>
+    <th>
+      Score
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Target
+    </th>
+    <th>
+    &nbsp;
+    </th>
+  </thead>
+  <tbody>
+  <% if current_user.tracks_count > 0 %>
+    <%= render tracks %>
+  <% else %>
+    <tr><td id="links_nolinks" colspan="3">You aren't tracking any links yet.</td></tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+<%= form_for([current_user, track], method: :post, remote: true) do |form| %>
+  <%= form.hidden_field :title, value: link.title[0..244] %>
+  <%= form.hidden_field :name, value: link.attributes[:name] %>
+  <%= form.hidden_field :score, value: link.score %>
+  <%= form.hidden_field :first_score, value: link.score %>
+
+  Enter target score:
+  <div class="form-group mini-form tmt">
+    <%= form.text_field :target_score, value: link.score, class: "short_input" %>
+  </div>
+  
+  <%= form.submit "Track This", :class => "btn btn-info" %>
+<% end %>

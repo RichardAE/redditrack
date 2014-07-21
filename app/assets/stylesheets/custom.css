@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+
+[Custom Stylesheet]
+
+
+Last change:	03/25/2013
+Assigned to:	You
+
+-------------------------------------------------------------------*/
+
+#main_outer { margin-top: 20px;}
+
+.link_title, .link_score, .bold {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.link_details { 
+  margin-top: 15px; 
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.short_input 
+{ 
+  width: 50px; 
+  padding-left: 3px; 
+}
+
+.inputpad { padding-left: 3px;  }
+
+.mini-form { height: 15px; }
+
+.search_pd { padding-left: 12px; }
+
+.navbar-header { padding-left: 15px;  }
+
+.right { text-align:right; }
+
+.smt { margin-top: 12px; }
+
+.tmt { margin-top: 4px; }
+
+.smb { margin-bottom: 6px; }
+
+.center { text-align:center; }
+
+.iconhover { color: #428BCA; }
+
+.iconhover:hover { 
+  text-decoration: underline; 
+  cursor: pointer;
+}
+
+.hit_target { color: green; }
+
+.rising { color: #2E9AFE; }
+
+.falling { color: red; }
+
+#sub_search_results {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD; 
+} 

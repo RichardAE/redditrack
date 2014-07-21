@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
           :rememberable, :omniauthable
 
   has_many :tracks
+
+  
 end

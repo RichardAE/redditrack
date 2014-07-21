@@ -1,5 +1,18 @@
-<%= div_for(track) do |div|  %>
-  <div id="track_item_score_<%= track.id %>" <%= check_hit_target(track) %>><%= track.score %></div> <div class="success">| <%= track.title %> | target:  <%= track.target_score %></div>
-
-  <%= link_to "Delete", user_track_path(current_user, track), method: :delete, :remote => true %>
-<% end %>
+<tr id="track_<%= track.id %>">
+  <td>
+    <div id="track_item_score_<%= track.id %>" class="link_score <%= check_hit_target(track) %>">
+      <%= track.score %>
+    </div> 
+  </td>
+  <td>
+    <div class="success"><%= trim_content(track.title, 50) %></div>
+  </td>
+  <td class="link_score">
+    <%= track.target_score %> 
+  </td>
+  <td>
+    <%= link_to user_track_path(current_user, track), method: :delete, :remote => true  do %>
+      <i class="icon-remove"></i>
+    <% end %>
+  </td>
+</tr>
