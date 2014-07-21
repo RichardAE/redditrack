@@ -42,6 +42,16 @@ function bind_popovers_on_links()
   });
 }
 
+function quick_hide_parent(element)
+{
+  $(element).closest('div').remove();
+}
+
+function quick_hide(element)
+{
+  $(element).closest('a').hide();
+}
+
 function bind_click_clear()
 {
   $('.click_clear').on("click", function(event)

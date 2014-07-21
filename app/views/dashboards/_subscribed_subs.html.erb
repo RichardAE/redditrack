@@ -3,7 +3,7 @@
     <div id="sub_<%= sub.full_name %>">
       <%= sub.name %>&nbsp;&nbsp;
       <%= link_to sub_path(:id => sub.full_name), method: :delete, :remote => true do %>
-      <i class="icon-remove"></i>
+      <i class="icon-remove" onclick="quick_hide_parent(this);"></i>
       <% end %>
     </div>
   <% end %>

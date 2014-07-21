@@ -9,5 +9,5 @@
     <%= form.text_field :target_score, value: link.score, class: "short_input" %>
   </div>
   
-  <%= form.submit "Track This", :class => "btn btn-info" %>
+  <%= form.submit "Track This", :class => "btn btn-info", data: { disable_with: "Working..." } %>
 <% end %>

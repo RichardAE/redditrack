@@ -27,11 +27,11 @@ module ApplicationHelper
     end
   end
 
-  def get_search_header(sub)
+  def get_search_header(sub,term)
     if sub.blank?
-      "Links from all subs"
+      ("Links from all subs" + get_search_term(term)).html_safe
     else
-      "Links from #{sub}"
+      ("Links from #{sub}"  + get_search_term(term)).html_safe
     end
   end
 
@@ -43,6 +43,14 @@ module ApplicationHelper
 
   private
 
+  def get_search_term(term)
+    if !term.blank?
+      " for '<b>#{term}</b>'"
+    else
+      ""
+    end
+  end
+
   def check_rise_or_fall(track)
     if track.score >= track.first_score
       "rising"
@@ -53,7 +61,7 @@ module ApplicationHelper
 
   def generate_vote_btn(link)
     link_to vote_path(id: link.full_name), method: :put, title: "Upvote", remote: true do 
-      "<i class=\"icon-arrow-up\"></i>".html_safe
+      "<i onclick=\"quick_hide(this);\" class=\"icon-arrow-up\"></i>".html_safe
     end
   end
 end
