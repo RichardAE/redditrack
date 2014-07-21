@@ -1,6 +1,4 @@
 class Dashboard
-  require 'redditkit'
-
   def initialize(user)
     @user ||= user
     subscribed_subs

@@ -28,5 +28,6 @@ gem 'lazybox'
 gem 'gon' 
 gem 'jquery-form-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
-
-# gem 'redditkit', :git => 'https://github.com/RichardAE/RedditKit.rb.git'
+gem 'unicorn'
+gem 'redditkit', :git => 'https://github.com/RichardAE/RedditKit.rb.git'
+gem 'foreman'

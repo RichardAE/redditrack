@@ -13,7 +13,7 @@ function update_tracks()
         gon.user_tracks.push(link_id);
       });
     }
-    setTimeout(update_worker, 10000);
+    setTimeout(update_worker, 7000);
   })();
 }
 
