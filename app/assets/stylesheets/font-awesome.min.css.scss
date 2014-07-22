@@ -23,10 +23,11 @@
 
 @font-face {
   font-family:'FontAwesome';
-  src:url('/assets/fontawesome-webfont.eot');
-  src:url('/assets/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fontawesome-webfont.woff') format('woff'),
-    url('/assets/fontawesome-webfont.ttf') format('truetype');
+
+  src:asset-url("fontawesome-webfont.eot", font);
+  src:asset-url("fontawesome-webfont.eot?#iefix", font),
+    asset-url("fontawesome-webfont.woff", font),
+    asset-url("fontawesome-webfont.ttf", font);
   font-weight:normal;
   font-style:normal
 }
