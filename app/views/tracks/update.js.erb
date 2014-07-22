@@ -22,7 +22,7 @@ $('#<%= div_id_s("track_score", @track.id) %>').html("<%= @track.score %>");
 // Alert if target has been reached
 $.msgGrowl ({
   type: 'success', 
-  title: '<%= trim_content(@track.title, 50) %>', 
+  title: '<%= trim_content(@track.title, 90) %>', 
   text: 'Has hit it\'s target of <%= @track.target_score %>!',
   position: 'top-right',
   sticky: true
