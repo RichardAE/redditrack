@@ -2,10 +2,10 @@
 
 [Main Stylesheet]
 
-Project:	Base Admin
-Version:	3.0
-Last change:	09/04/2013
-Assigned to:	Rod Howard (rh)
+Project:  Base Admin
+Version:  3.0
+Last change:  09/04/2013
+Assigned to:  Rod Howard (rh)
 
 
 *** Any customizations made to this should be added to the custom.css
@@ -17,7 +17,7 @@ upgrading in the future easier. ***
 [ Global ]
 */
 body {
-  background: #e9e9e9 url(/assets/tiny_grid.png) repeat 0 0;
+  background: #e9e9e9 image-url("tiny_grid.png") repeat 0 0;
   font: 13px/1.7em 'Open Sans';
 }
 p {
@@ -466,7 +466,7 @@ h6 {
 .ui-datepicker-next-hover .ui-icon,
 .ui-datepicker-prev-hover .ui-icon {
   background-color: #ffffff;
-  background-image: url(/assets/css/ui-lightness/images/ui-icons_222222_256x240.png);
+  background-image: image-url("lightness/ui-icons_222222_256x240.png");
   opacity: .5;
 }
 /*------------------------------------------------------------------
@@ -481,7 +481,7 @@ h6 {
   z-index: 2;
   width: 25px;
   height: 16px;
-  background: url(/assets/img/jquery/handle.png) no-repeat;
+  background: image-url("jquery/handle.png") no-repeat;
   border: none;
   cursor: pointer;
 }
@@ -566,7 +566,7 @@ h6 {
   margin-bottom: -0.6em;
   width: 15px;
   height: 24px;
-  background: url(/assets/img/jquery/handle-vertical.png) no-repeat;
+  background: image-url("jquery/handle-vertical.png") no-repeat;
 }
 .ui-slider-vertical .ui-slider-handle:hover {
   background-position: 0 -24px;
@@ -635,7 +635,7 @@ h6 {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url(/assets/img/validation/validation-success.png) no-repeat 0 0;
+  background: image-url("validation/validation-success.png") no-repeat 0 0;
 }
 .form-horizontal .form-group span.error {
   margin-left: 1.5em;
@@ -703,7 +703,7 @@ h6 {
   margin-right: 3em;
   font-size: 15px;
   font-weight: 400;
-  color: #444;
+  color: #555;
   line-height: 18px;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
@@ -714,6 +714,7 @@ h6 {
   margin-left: 13px;
   margin-right: -2px;
   font-size: 16px;
+  color: #555;
   vertical-align: middle;
 }
 .widget .widget-content {
@@ -732,7 +733,6 @@ h6 {
   -moz-border-radius-topright: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  color: #555;
 }
 .widget.widget-nopad .widget-content {
   padding: 0;
@@ -863,39 +863,23 @@ h6 {
 .jquery-msgbox-wrapper {
   padding-left: 90px;
 }
+
 .jquery-msgbox-alert {
-  background: url(/assets/img/notifications/alert-48.png) no-repeat 21px 20px;
+  background: image-url("notifications/alert-48.png") no-repeat 21px 20px;
 }
 .jquery-msgbox-info {
-  background: url(/assets/img/notifications/info-48.png) no-repeat 21px 20px;
+  background: image-url("notifications/info-48.png") no-repeat 21px 20px;
 }
 .jquery-msgbox-error {
-  background: url(/assets/img/notifications/error-48.png) no-repeat 21px 20px;
+  background: image-url("notifications/error-48.png") no-repeat 21px 20px;
 }
 .jquery-msgbox-prompt {
-  background: url(/assets/img/notifications/question-dark-48.png) no-repeat 20px 20px;
+  background: image-url("notifications/question-dark-48.png") no-repeat 20px 20px;
 }
 .jquery-msgbox-confirm {
-  background: url(/assets/img/notifications/question-48.png) no-repeat 20px 20px;
+  background: image-url("notifications/question-48.png") no-repeat 20px 20px;
 }
-/*------------------------------------------------------------------
-[ Growl / .msgGrowl ]
-*/
-.msgGrowl.success .msgGrowl-content {
-  background: url(/assets/img/notifications/success-32.png) no-repeat 7px 13px;
-}
-.msgGrowl.error .msgGrowl-content {
-  background: url(/assets/img/notifications/error-32.png) no-repeat 7px 13px;
-}
-.msgGrowl.info .msgGrowl-content {
-  background: url(/assets/img/notifications/info-32.png) no-repeat 7px 13px;
-}
-.msgGrowl.warning .msgGrowl-content {
-  background: url(/assets/img/notifications/alert-32.png) no-repeat 7px 13px;
-}
-/*------------------------------------------------------------------
-[ Back to Top / #back-to-top ]
-*/
+
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -1316,7 +1300,7 @@ ul.pagination li.active a:hover {
   width: 184px;
   height: 120px;
   background-color: rgba(0, 0, 0, 0.65);
-  background-image: url(/assets/img/gallery/zoom.png);
+  background-image: image-url("gallery/zoom.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border-top-right-radius: 3px;
