@@ -1,0 +1,119 @@
+commit defd4dca4e0b4d3aad681e3b846ca03fd5345bc0
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 22:51:42 2014 +0100
+
+    favicon added
+
+commit 056f34ebb5f34ab96adc3cd1f7ccfa9ee254edd3
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 22:44:09 2014 +0100
+
+    favicon added and working
+
+commit 43f0387ce6df5e9d73db4c516e46969b27eb5581
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 22:39:40 2014 +0100
+
+    favicon again
+
+commit a72d2d8e2cee1a75d57e3ac54161fb97c90bd994
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 22:36:10 2014 +0100
+
+    favicon again
+
+commit f40c811e2b6182483a6a8e7a4f90f2dd4c6e6ef1
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 22:13:53 2014 +0100
+
+    Wording changes and favicon
+
+commit cea4a16fd30d38f5be1fd07ee6a16fe0e07a544d
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 20:44:53 2014 +0100
+
+    Fixed image/css issue live
+
+commit 270187a5e9c525a575a3a8cca36c55437e7b501f
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 19:49:48 2014 +0100
+
+    Fixed css issue and reworded homepage
+
+commit 0c0f46731fb757b8503068783ed5aff05dbc8fe5
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 19:34:59 2014 +0100
+
+    added images to correct paths
+
+commit 619899849128342857b5fe4a3f3b9ad6b845dff7
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 19:31:38 2014 +0100
+
+    fixed heroku images via scss helpers
+
+commit 0ee56e182e2345eea3e54842af6bedabcc7c4c51
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 19:22:25 2014 +0100
+
+    tracking update status changes and email config
+
+commit 441add203c2b4a46b6df0f12e0e283d092379fc3
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 18:06:33 2014 +0100
+
+    All features added, final refactoring done, push live
+
+commit cb168f4663a2cfc3ff4d7ff91f244702168dab32
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 22 18:02:15 2014 +0100
+
+    All features added, final refactoring done, push live
+
+commit 76cd85e6957419cad915fdb31ad806d727bf7a22
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Mon Jul 21 21:36:17 2014 +0100
+
+    added unicorn and sorted static assets
+
+commit c345a6d6dc2d1f32229c57cef6e500565cd1982b
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Mon Jul 21 21:26:38 2014 +0100
+
+    commit for live test #1
+
+commit 3438ceac665591f979f899099d2d8a13930c98b4
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Mon Jul 21 19:39:30 2014 +0100
+
+    Template implemented and customised, final tweaks to go
+
+commit b6e9b2e64eaff774db7a6394a283d13c2f1d6b70
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Sun Jul 20 14:22:56 2014 +0100
+
+    before installing bootstrap template
+
+commit e6120fa4ad3c32c6c33fd85060993237035d4915
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Sat Jul 19 22:29:54 2014 +0100
+
+    backend mostly done, fresh bootstrap
+
+commit 3b5ce6483f4b31afce0625a4e8b204f827a34fe4
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Fri Jul 18 17:33:28 2014 +0100
+
+    added more features to dashboard, list links and search
+
+commit 376b9b539b72c21b742f6ac5b23918a8da7920c8
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Thu Jul 17 16:00:06 2014 +0100
+
+    basic reddit actions and dashboard refactored
+
+commit 9681e6d0acc5ec0fc118e48667f2f5ff2c2f5092
+Author: RichardAE <richard@raelwebsolutions.com>
+Date:   Tue Jul 15 17:10:09 2014 +0100
+
+    First commit
