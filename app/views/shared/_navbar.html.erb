@@ -1,0 +1,33 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+  <ul class="nav navbar-nav navbar-right">
+    <% if user_signed_in? %>
+    <li class="dropdown">
+      <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="icon-cog"></i>
+        Settings
+        <b class="caret"></b>
+      </a>
+      
+      <ul class="dropdown-menu">
+        <li><%= link_to "Notification Settings", edit_user_path(current_user) %></li>
+      </ul>
+    </li>
+
+
+    <li class="dropdown">
+          
+    <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+      <i class="icon-user"></i> 
+      <%= current_user.name %>
+      <b class="caret"></b>
+    </a>
+    
+    <ul class="dropdown-menu">
+      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %>   </li>
+    </ul> 
+  </li>
+  <% else %>
+    <li><%= link_to "Sign in with your Reddit Account", omniauth_authorize_path(:user, :reddit) %> </li>
+  <% end %>
+  </ul>
+</div> <!-- /navbar-ex1-collapse -->

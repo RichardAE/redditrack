@@ -1,10 +1,10 @@
 $('#track_<%= @track.id %>').remove();
 
 // Check if track is already displayed, if so change to untracked
-if ($('#<%= div_id("link_tracked", @track.name) %>').length > 0)
+if ($('#<%= div_id_s("link_tracked", @track.name) %>').length > 0)
 {
-  $('#<%= div_id("link_tracked", @track.name) %>').hide();
-  $('#<%= div_id("link_track_form", @track.name) %>').show();
+  $('#<%= div_id_s("link_tracked", @track.name) %>').addClass('hide');
+  $('#<%= div_id_s("link_track_form", @track.name) %>').removeClass('hide');
 }
 
 // Remove from tracks array to prevent AJAX update for deleted tracks

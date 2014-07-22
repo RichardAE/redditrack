@@ -1,1 +1,6 @@
-$('#subscribed_subs').html("<%= j render 'dashboards/subscribed_subs', subs: @remove_sub.user_subscribed_subs %>");
+// Update user subs list
+$('#subscribed_subs').html("<%= j render 'shared/subscribed_subs', subs: @remove_sub.user_subscribed_subs %>");
+
+// Update search filter with new subs
+$('#links_search').html("<%= j render 'shared/search_filter', subs: @remove_sub.subs_for_search %>");
+bind_quick_hides();

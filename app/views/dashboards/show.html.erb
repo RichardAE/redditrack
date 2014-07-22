@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8 col-xs-12">
-    <div class="widget">
+    <div class="widget" data-step="1" data-intro="This is where you can search for relevant reddit posts.">
       <div class="widget-header"> 
         <i class="icon-plane"></i>
         <h3>Search Reddit</h3>
@@ -13,7 +13,7 @@
       </div>  
     </div> 
 
-    <div class="widget">
+    <div class="widget" data-step="2" data-intro="All the links from reddit will be displayed here.">
       <div class="widget-header"> 
         <i class="icon-list"></i>
         <h3 id="results_header">Reddit front page</h3>
@@ -23,31 +23,11 @@
         <div id="links_content">
           <%= render 'shared/reddit_links', links: @dashboard.reddit_front_page, track: @dashboard.build_track, user_tracks: @dashboard.track_names_array %>
         </div> 
+        <div id="links_more">  
+        </div>
       </div>  
     </div> 
   </div>
 
-  <div class="col-md-4 col-xs-12">
-    <div class="widget">
-      <div class="widget-header"> 
-        <i class="icon-bookmark"></i>
-        <h3>My Tracks</h3>
-      </div>
-      
-      <div class="widget-content">
-        <%= render 'shared/tracks', tracks: @dashboard.user_tracks %>
-      </div>  
-    </div>  
-    <div class="widget">
-      <div class="widget-header"> 
-        <i class="icon-star"></i>
-        <h3>My SubReddits</h3>
-      </div>
-      
-      <div class="widget-content">
-        <%= render 'search_subs' %><br>
-        <%= render 'subscribed_subs', subs: @dashboard.subscribed_subs %>
-      </div>  
-    </div>  
-  </div>
+  <%= render 'shared/subs_and_tracks' %>
 </div>

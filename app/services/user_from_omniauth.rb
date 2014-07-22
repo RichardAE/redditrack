@@ -20,7 +20,7 @@ class UserFromOmniauth
       provider: @auth.provider, 
       uid: @auth.uid, 
       name: @auth.info.name,
-      email: "user#{rand(0..50000).ceil}@reddittool.com", 
+      email: "user#{rand(0..50000).ceil}@reddittrack.com", 
       password: Devise.friendly_token[0,20]
     )
   end

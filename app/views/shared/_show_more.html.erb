@@ -1,0 +1,12 @@
+<% if links.results.size == 25 %>
+<div class="center">
+  <%= form_tag(link_search_path(id: links.results.last.full_name), method: :put, remote: true) do |form| %>
+    <%= hidden_field_tag 'update[subreddit]', update[:subreddit] %>
+    <%= hidden_field_tag 'update[sort]', update[:sort] %>
+    <%= hidden_field_tag 'update[time]', update[:time] %>
+    <%= hidden_field_tag 'update[term]', update[:term] %>
+
+    <%= submit_tag "Show More", class: "btn btn-info", data: { disable_with: "Working..." } %>
+  <% end %>
+</div>
+<% end %>

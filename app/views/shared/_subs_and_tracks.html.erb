@@ -1,0 +1,23 @@
+<div class="col-md-4 col-xs-12">
+  <div class="widget" data-step="4" data-intro="All links you are tracking will display here. Scores update in real time every 10 seconds (one link per update)" data-position="left">
+    <div class="widget-header"> 
+      <i class="icon-star"></i>
+      <h3>My Tracks</h3>
+    </div>
+    
+    <div class="widget-content">
+      <%= render 'shared/tracks', tracks: @dashboard.user_tracks %>
+    </div>  
+  </div>  
+  <div class="widget" data-step="5" data-intro="If you want to add a new subreddit to the search filter, this is the place to do it."  data-position="left">
+    <div class="widget-header"> 
+      <i class="icon-bookmark"></i>
+      <h3>My SubReddits</h3>
+    </div>
+    
+    <div class="widget-content">
+      <%= render 'shared/search_subs' %><br>
+      <%= render 'shared/subscribed_subs', subs: @dashboard.subscribed_subs %>
+    </div>  
+  </div>  
+</div>

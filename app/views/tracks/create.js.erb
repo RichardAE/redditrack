@@ -1,14 +1,20 @@
-$('#links_nolinks').hide();
+// Hide placeholder if it's showing
+<% if @track.errors.count > 0 %>
+  $('.target').css('outline', 'red solid thin');
+<% else %>
+  // Hide placeholder is visible
+  $('#links_nolinks').hide();
 
-// Append new track to My Tracks
-$('#tracks_content tr:last').after("<%= j render 'track', track: @track %>");
+  // Append new track to My Tracks
+  $('#tracks_content tr:last').after("<%= j render 'track', track: @track %>");
 
-// Hide track submission form and show tracked status
-$('#link_track_form_<%= @track.name %>').hide();
-$('#link_tracked_<%= @track.name %>').html("<%= j render 'track_added', track: @track %>").show();
+  // Hide track submission form and show tracked status
 
-// Re-add track to the end of the tracks array
-gon.user_tracks.push("<%= @track.name %>");
+  $('#<%= div_id_s("link_track_form", @track.name) %>').addClass('hide');
+  $('#<%= div_id_s("link_tracked", @track.name) %>').html("<%= j render 'track_added', track: @track %>").removeClass('hide');
 
-$('.popover-title').hide();
-$('.popover-content').hide();
+  // Re-add track to the end of the tracks array
+  gon.user_tracks.push("<%= @track.name %>");
+  $('.target').css('outline', 'none');
+  hide_popovers();
+<% end %>

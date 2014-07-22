@@ -1,46 +1,17 @@
-<% if !links.first.nil? %>
-<table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Score</th>
-      <th>Content</th>
-      <th>Track</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% links.each do |link| %>
-    <tr>
-      <td id="<%= div_id('link_vote', link.full_name) %>" class="text-center">
-        <%= vote_up_link(link) %>
-      </td>
-      <td class="link_score">
-        <%= link.attributes[:score] %></td>
-      <td>
-        <span class="link_title">
-          <%= link_to trim_content(link.title, 160), url_from_permalink(link.attributes[:permalink]), target: "_blank" %>
-        </span>
-        <div class="link_details">
-            <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago by <%= link.author %>.&nbsp;&nbsp;<%= link.attributes[:num_comments] %> <i class="icon-comment"></i> 
-        </div>
-      </td>
-      <td id="<%= div_id('link_tracking', link.full_name) %>">
-        <div id="<%= div_id('link_tracked', link.full_name) %>" <% if !check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
-          <%= render 'tracks/track_added' %>
-        </div>
-        <div id="<%= div_id('link_track_form', link.full_name) %>" <% if check_link_tracking?(user_tracks, link) %>style="display:none;"<% end %>>
-          <div class="popover-markup center"> <%= button_tag "Track", class: "btn btn-info smt trigger" %>
-              <div style="width: 150px;" class="head hide">Track this link</div>
-              <div style="width: 150px;" class="content hide">
-                  <%= render 'tracks/new_track', link: link, track: track %>
-              </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<% if links.results.size > 0 %>
+  <table id="links_table" class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Score</th>
+        <th>Content</th>
+        <th>Track</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render 'shared/reddit_link_rows', links: links, track: track, user_tracks: user_tracks %>
+    </tbody>
+  </table>
 <% else %>
   Sorry no results were returned. Please try tweaking your search paramters.
 <% end %>

@@ -5,4 +5,5 @@ class Track < ActiveRecord::Base
   validates_length_of :name, maximum: 255
   validates_numericality_of :score, only_integer: true, on: :create
   validates_numericality_of :first_score, only_integer: true, on: :create
+  validates_numericality_of :target_score, only_integer: true, on: :create
 end

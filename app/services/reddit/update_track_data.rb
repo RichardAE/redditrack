@@ -1,6 +1,5 @@
 class Reddit::UpdateTrackData < Reddit::Shared
   def initialize(user, track_id)
-    @user = user
     @client = create_client(user)
     @track_id = track_id
   end
@@ -9,6 +8,7 @@ class Reddit::UpdateTrackData < Reddit::Shared
     link = Reddit::SingleLink.new(@client, @track_id).retrieve
     track = @user.tracks.find_by_name(@track_id)
     track.update_attributes(score: link.score.to_i, hit_target: check_has_hit_target(link, track))
+    email_notify(track)
     track
   end
 
@@ -27,6 +27,12 @@ class Reddit::UpdateTrackData < Reddit::Shared
       2
     else
       2
+    end
+  end
+
+  def email_notify(track)
+    if track.hit_target == 1 && @user.notify_me && @user.email !~ /user\d+@reddittrack.com/
+      EmailUserAfterTarget.new(@user, track).process
     end
   end
 end

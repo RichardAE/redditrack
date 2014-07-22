@@ -1,0 +1,14 @@
+<% flash.each do |type, message| %>
+  <div class="alert fade in <%= bootstrap_class_for(type) %> alert-dismissable">
+    <button aria-hidden="true" class="close" data-dismiss="alert" type="button">X</button> 
+    <% if message == 'signin' %>
+      You have successfully signed in via Reddit. 
+
+      <% if user_signed_in? && current_user.tracks_count == 0 %>
+      <button id="start_tour" class="btn btn-info sml">Start the Tour</button>
+      <% end %>
+    <% else %>
+      <%= message %>
+    <% end %>
+  </div>
+<% end %>

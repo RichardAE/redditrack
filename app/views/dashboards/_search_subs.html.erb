@@ -1,8 +1,0 @@
-Search Subs
-<%= form_tag(sub_search_path, method: :post, remote: true, class: "tmt") do |form| %>
-  <%= text_field_tag :search, nil, class: "inputpad click_clear", placeholder: "Enter search term" %>
-  <%= submit_tag "Go", data: { disable_with: "Working..." } %>
-<% end %>
-<div id="sub_search_results" class="smt hide">
-
-</div>

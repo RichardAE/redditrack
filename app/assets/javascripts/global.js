@@ -13,10 +13,11 @@ function update_tracks()
         gon.user_tracks.push(link_id);
       });
     }
-    setTimeout(update_worker, 7000);
+    setTimeout(update_worker, 10000);
   })();
 }
 
+// For removing a track after it's been destroyed
 function remove_from_array(arr) {
     var what, a = arguments, L = a.length, ax;
     while (L > 1 && arr.length) {
@@ -26,6 +27,13 @@ function remove_from_array(arr) {
         }
     }
     return arr;
+}
+
+function hide_popovers()
+{
+  $('.popover-markup>.trigger').each(function() {
+      $(this).popover('hide');
+  });  
 }
 
 function bind_popovers_on_links()
@@ -52,6 +60,28 @@ function quick_hide(element)
   $(element).closest('a').hide();
 }
 
+function bind_quick_hides()
+{
+  $('.quick_hide').on("click", function(event)
+  {
+    quick_hide(this);
+  });
+
+  $('.quick_hide_parent').on("click", function(event)
+  {
+    quick_hide_parent(this);
+  });
+}
+
+function bind_hide_and_submit()
+{
+  $('.hide_and_submit').on("click", function(event)
+  {
+    $(this).parent().submit();
+    $(this).parent().parent().remove();
+  });
+}
+
 function bind_click_clear()
 {
   $('.click_clear').on("click", function(event)
@@ -60,9 +90,22 @@ function bind_click_clear()
   });
 }
 
+function add_temporary_row_color(id, type)
+{
+  row = $('#' + id);
+  row.addClass(type);
+  remove_color = function() { row.removeClass(type); }
+  window.setTimeout("remove_color();", 3000);
+}
+
 $(function() {
   bind_popovers_on_links();
+  bind_quick_hides();
   bind_click_clear();
+
+  $('#start_tour').on("click", function(event) {
+    introJs().setOptions({ 'tooltipPosition': 'right' }).start();
+  });
 
   // Check we're on the dashboard, then start update worker
   if(typeof(gon) != 'undefined')

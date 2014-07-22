@@ -1,9 +1,40 @@
-<br>
-<% if user_signed_in? %>
-  <%= @response.inspect %>
-<% else %>
-  Not logged in sorry
-<% end %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-xs-12">
+    <div class="widget">
+      <div class="widget-header"> 
+        <i class="icon-star"></i>
+        <h3>Welcome</h3>
+      </div>
+      
+      <div class="widget-content">
+        <div class="col-md-12">
+          <h4><strong>This is a prototype tracking tool for Reddit marketers.</strong></h5>
 
+          <div class="slineh">
+            Manually keeping tabs on relevant Reddit posts for your campaign is a huge waste of time. On /r/AskReddit, with over 200++ posts an hour, trying to keep track of a link that might just hit the front page is a full time job in itself. 
+          </div>
+          
+          <div class="smt">
+            Enter <strong>Reddit Track</strong>.
+          </div>
 
+          <div class="smt">
+            <ul class="list-group">
+              <li class="list-group-item">Quickly search and filter links from across reddit</li>
+              <li class="list-group-item">Track links of interest with a couple of clicks, setting the target score you are hoping to reach</li>
+              <li class="list-group-item">Get notified when links hit their target on screen and by email</li>
+            </ul>
+          </div>
 
+          <div class="smt">
+            ( Please note you will need Javascript enabled to use this tool whilst it's in prototype. )
+          </div>
+
+          <div class="smt">
+            <%= link_to "Sign in with your Reddit Account", omniauth_authorize_path(:user, :reddit), class: "large_link" %> 
+          </div>
+        </div>
+      </div>  
+    </div> 
+  </div>
+</div>

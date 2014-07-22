@@ -3,7 +3,7 @@
     <%= hidden_field_tag :subreddit, sub.full_name %>
 
     <% if !subscribed %> 
-      <span class="bold"><%= sub.display_name %></span>&nbsp;&nbsp;<i onclick="$(this).parent().submit();$(this).parent().parent().remove();" class="iconhover icon-arrow-right"></i> 
+      <span class="bold"><%= sub.display_name %></span>&nbsp;&nbsp;<i class="iconhover icon-arrow-right hide_and_submit"></i> 
     <% else %>
       <%= sub.display_name %>
     <% end %>

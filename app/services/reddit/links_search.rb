@@ -1,8 +1,8 @@
 class Reddit::LinksSearch < Reddit::Shared
-  def initialize(user, search)
-    @user = user
+  def initialize(user, search, id = nil)
     @client = create_client(user)
     @search = search
+    @id = id
   end
 
   def links_by_term
@@ -24,8 +24,9 @@ class Reddit::LinksSearch < Reddit::Shared
   end
 
   def build_search_options
-    options = { limit: 50, sort: @search[:sort], time: @search[:time] }
+    options = { limit: 25, sort: @search[:sort], time: @search[:time] }
     check_sub_search(options)
+    check_is_update(options)
     options
   end
 
@@ -33,6 +34,12 @@ class Reddit::LinksSearch < Reddit::Shared
     if !@search[:subreddit].blank?
       options[:subreddit] = @search[:subreddit] 
       options[:restrict_to_subreddit] = true
+    end
+  end
+
+  def check_is_update(options)
+    if !@id.nil?
+      options[:after] = @id
     end
   end
 end

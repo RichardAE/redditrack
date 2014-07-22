@@ -1,6 +1,5 @@
 class Reddit::VoteUpLink < Reddit::Shared
   def initialize(user, link_id)
-    @user = user
     @link_id = link_id
     @client = create_client(user)
   end

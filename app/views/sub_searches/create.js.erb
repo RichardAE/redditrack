@@ -5,7 +5,7 @@ $('#sub_search_results').html('').removeClass('hide');
 <% else %>
   <% @search.search_subs_by_name.take(5).each do |sub| %>
     // if not already subscribed, add to results
-    if($('#sub_<%= sub.full_name %>').length == 0)
+    if($('#<%= div_id_s("sub", sub.full_name) %>').length == 0)
     {
       $('#sub_search_results').append("<%= j render 'sub_searches/sub_search_result', sub: sub, subscribed: false %>");
     }
@@ -16,4 +16,5 @@ $('#sub_search_results').html('').removeClass('hide');
   <% end %>
 <% end %>
 
+bind_hide_and_submit();
 

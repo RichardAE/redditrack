@@ -8,12 +8,38 @@ Assigned to:	You
 
 -------------------------------------------------------------------*/
 
+.short_input 
+{ 
+  width: 50px; 
+  padding-left: 3px; 
+}
+
+.med_input
+{ 
+  width: 150px; 
+}
+
+#sub_search_results {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD; 
+} 
+
 #main_outer { margin-top: 20px;}
 
-.link_title, .link_score, .bold {
+.link_title {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
 }
+
+.link_score {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bold { 
+  font-size: 13px;
+  font-weight: 500; 
+} 
 
 .link_details { 
   margin-top: 15px; 
@@ -21,23 +47,22 @@ Assigned to:	You
   font-weight: 500;
 }
 
-.short_input 
-{ 
-  width: 50px; 
-  padding-left: 3px; 
-}
+.head { width: 200px; }
+.content { width: 200px; }
 
 .inputpad { padding-left: 3px;  }
 
 .mini-form { height: 15px; }
 
-.search_pd { padding-left: 12px; }
+.search_pd { padding-left: 8px; }
 
 .navbar-header { padding-left: 15px;  }
 
 .right { text-align:right; }
 
 .smt { margin-top: 12px; }
+
+.sml { margin-left: 14px; }
 
 .tmt { margin-top: 4px; }
 
@@ -46,6 +71,8 @@ Assigned to:	You
 .center { text-align:center; }
 
 .iconhover { color: #428BCA; }
+
+.slineh { line-height: 1.3em; }
 
 .iconhover:hover { 
   text-decoration: underline; 
@@ -58,7 +85,6 @@ Assigned to:	You
 
 .falling { color: red; }
 
-#sub_search_results {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DDD; 
-} 
+.large_link { font-size: 16px; font-weight: bold; }
+
+.light { color: #777; }

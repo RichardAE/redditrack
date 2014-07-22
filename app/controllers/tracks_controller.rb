@@ -24,6 +24,6 @@ class TracksController < ApplicationController
   end
 
   def track_params
-    params.require(:track).permit(:title, :name, :score, :first_score, :target_score)
+    params.require(:track).permit(:title, :name, :score, :first_score, :target_score, :permalink)
   end
 end

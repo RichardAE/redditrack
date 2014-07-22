@@ -1,4 +1,13 @@
 module ApplicationHelper
+
+  def div_id(name, id)
+    "id=#{name}_#{id}"
+  end
+
+  def div_id_s(name, id)
+    "#{name}_#{id}"
+  end
+
   def url_from_permalink(permalink)
     "http://www.reddit.com#{permalink}"
   end
@@ -11,12 +20,16 @@ module ApplicationHelper
     end
   end
 
-  def check_link_tracking?(user_tracks, link)
-    user_tracks.include?(link.full_name)
+  def check_link_tracking(user_tracks, link)
+    if !user_tracks.include?(link.full_name)
+      "class=hide"
+    end
   end
 
-  def div_id(name, id)
-    "#{name}_#{id}"
+  def check_link_tracked(user_tracks, link)
+   if user_tracks.include?(link.full_name)
+      "class=hide"
+    end
   end
 
   def check_hit_target(track)
@@ -31,13 +44,22 @@ module ApplicationHelper
     if sub.blank?
       ("Links from all subs" + get_search_term(term)).html_safe
     else
-      ("Links from #{sub}"  + get_search_term(term)).html_safe
+      ("Links from /r/#{sub}"  + get_search_term(term)).html_safe
     end
   end
 
   def trim_content(text, limit)
     if !text.blank?
       TrimContentWithWords.trimmed_content(text, limit)
+    end
+  end
+
+
+  def bootstrap_class_for flash_type
+    if flash_type == 'alert'
+      "alert-danger"
+    else
+      "alert-success"
     end
   end
 
@@ -61,7 +83,7 @@ module ApplicationHelper
 
   def generate_vote_btn(link)
     link_to vote_path(id: link.full_name), method: :put, title: "Upvote", remote: true do 
-      "<i onclick=\"quick_hide(this);\" class=\"icon-arrow-up\"></i>".html_safe
+      "<i class=\"quick_hide icon-arrow-up\"></i>".html_safe
     end
   end
 end

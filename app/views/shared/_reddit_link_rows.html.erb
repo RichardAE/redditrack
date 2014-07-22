@@ -1,0 +1,32 @@
+<% links.each_with_index do |link, index| %>
+<tr <% if index == 0 %>data-step="3" data-intro="Here you can upvote the link, see it's current score, click the title to visit the page on reddit and track it using the button on the right."<% end %>>
+  <td <%= div_id('link_vote', link.full_name) %> class="text-center">
+    <%= vote_up_link(link) %>
+  </td>
+  <td class="link_score center">
+    <%= link.attributes[:score] %></td>
+  <td>
+    <span class="link_title">
+      <%= link_to trim_content(link.title, 160), url_from_permalink(link.attributes[:permalink]), target: "_blank" %>
+    </span>
+    <div class="link_details">
+        <%= time_ago_in_words(Time.at(link.attributes[:created_utc]).localtime) %> ago 
+        by <%= link.author %>.&nbsp;&nbsp;
+        <%= link.attributes[:num_comments] %> <i class="icon-comment light"></i> 
+    </div>
+  </td>
+  <td <%= div_id('link_tracking', link.full_name) %>>
+    <div <%= div_id('link_tracked', link.full_name) %> <%= check_link_tracking(user_tracks, link) %>>
+      <%= render 'tracks/track_added' %>
+    </div>
+    <div <%= div_id('link_track_form', link.full_name) %> <%= check_link_tracked(user_tracks, link) %>>
+      <div class="popover-markup center"> <%= button_tag "Track", class: "btn btn-info smt trigger" %>
+          <div class="head hide">Track this link</div>
+          <div class="content hide">
+              <%= render 'tracks/new_track', link: link, track: track %>
+          </div>
+      </div>
+    </div>
+  </td>
+</tr>
+<% end %>

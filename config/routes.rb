@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   resource :dashboard, only: [:show]
   resources :subs, only: [:create, :destroy]
   resource :sub_search, only: [:create]
-  resource :link_search, only: [:create]
-  resources :links, only: [:show]
+  resources :link_searches, only: [:create, :update]
   resources :users, only: [:show, :edit, :update] do
     resources :tracks, only: [:create, :update, :destroy]
   end

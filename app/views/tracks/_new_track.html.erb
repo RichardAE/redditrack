@@ -3,10 +3,11 @@
   <%= form.hidden_field :name, value: link.attributes[:name] %>
   <%= form.hidden_field :score, value: link.score %>
   <%= form.hidden_field :first_score, value: link.score %>
+  <%= form.hidden_field :permalink, value: link.attributes[:permalink] %>
 
   Enter target score:
   <div class="form-group mini-form tmt">
-    <%= form.text_field :target_score, value: link.score, class: "short_input" %>
+    <%= form.text_field :target_score, value: link.score, class: "short_input target" %>
   </div>
   
   <%= form.submit "Track This", :class => "btn btn-info", data: { disable_with: "Working..." } %>

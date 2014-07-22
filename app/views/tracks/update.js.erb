@@ -1,21 +1,25 @@
-$('#<%= div_id("track_item_score", @track.id) %>').html("<%= @track.score %>");
+$('#<%= div_id_s("track_score", @track.id) %>').html("<%= @track.score %>");
 
 // Change class of score depending on whether rising, falling or hit target
 <% if @track.score <= @track.target_score %>
   <% if @track.score < @track.first_score %>
     // Link score is falling
-    $('#<%= div_id("track_item_score", @track.id) %>').removeClass("hit_target rising").addClass('falling')
+    $('#<%= div_id_s("track_score", @track.id) %>').removeClass("hit_target rising").addClass('falling');
+    add_temporary_row_color('<%= div_id_s("track", @track.id) %>', "danger");
   <% else %>
     // Link score is rising
-    $('#<%= div_id("track_item_score", @track.id) %>').removeClass("hit_target falling").addClass('rising')
+    $('#<%= div_id_s("track_score", @track.id) %>').removeClass("hit_target falling").addClass('rising');
+    add_temporary_row_color('<%= div_id_s("track", @track.id) %>', "info");
   <% end %>
 <% else %>
   // Link score has hit target
-  $('#<%= div_id("track_item_score", @track.id) %>').removeClass("rising falling").addClass('hit_target')
+  $('#<%= div_id_s("track_score", @track.id) %>').removeClass("rising falling").addClass('hit_target');
+  add_temporary_row_color('<%= div_id_s("track", @track.id) %>', "success");
 <% end %>
 
-// <%= @track.hit_target %>
+
 <% if @track.hit_target == 1 %>
+// Alert if target has been reached
 $.msgGrowl ({
   type: 'success', 
   title: '<%= trim_content(@track.title, 50) %>', 

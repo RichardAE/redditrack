@@ -1,9 +1,9 @@
 <div id="subscribed_subs">
   <% subs.each do |sub| %>
-    <div id="sub_<%= sub.full_name %>">
+    <div <%= div_id('sub', sub.full_name) %>>
       <%= sub.name %>&nbsp;&nbsp;
       <%= link_to sub_path(:id => sub.full_name), method: :delete, :remote => true do %>
-      <i class="icon-remove" onclick="quick_hide_parent(this);"></i>
+      <i class="icon-remove quick_hide_parent"></i>
       <% end %>
     </div>
   <% end %>

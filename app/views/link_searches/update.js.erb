@@ -1,0 +1,8 @@
+// Place results into appropriate div
+$("#links_table tr:last").after("<%= j render 'shared/reddit_link_rows', links: @search_update.links_by_term, :track => @search_update.build_track, user_tracks: @search_update.track_names_array %>");
+
+//links_more
+$("#links_more").html("<%= j render 'shared/show_more', links: @search_update.links_by_term, update: params[:update] %>");
+
+bind_popovers_on_links();
+bind_quick_hides();
