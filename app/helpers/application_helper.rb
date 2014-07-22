@@ -54,7 +54,6 @@ module ApplicationHelper
     end
   end
 
-
   def bootstrap_class_for flash_type
     if flash_type == 'alert'
       "alert-danger"

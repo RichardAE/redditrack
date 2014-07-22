@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a prototype tracking tool for Reddit.
 
-Things you may want to cover:
+Manually keeping tabs on relevant Reddit posts for traffic generation is a huge waste of time. On /r/AskReddit, with over 200++ posts an hour, trying to keep track of links that might just hit the front page is a full time job in itself.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Enter Reddit Track.
