@@ -1,11 +1,11 @@
 <tr <%= div_id('track', track.id) %>>
-  <td>
+  <td <%= div_id('track_score_col', track.id) %>>
     <div <%= div_id('track_score', track.id) %> class="link_score <%= check_hit_target(track) %>">
       <%= track.score %>
     </div> 
   </td>
   <td>
-    <%= link_to trim_content(track.title, 50), url_from_permalink(track.permalink), target: "_blank" %>
+    <%= link_to trim_content(track.title, 50), url_from_permalink(track.permalink), target: "_blank", title: track.title %>
   </td>
   <td class="link_score">
     <%= track.target_score %> 
