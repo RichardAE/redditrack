@@ -25,7 +25,7 @@ class RefreshRedditToken
     HTTParty.post("https://ssl.reddit.com/api/v1/access_token",
       body: { 
         state: "refresh_token_#{rand(0..20000)}",
-        redirect_uri: "http://localhost:3000/users/auth/reddit/callback", 
+        redirect_uri: ENV['REDDIT_URI'], 
         refresh_token: @user.refresh_token,
         grant_type: 'refresh_token',
       },
