@@ -5,3 +5,7 @@ This is a prototype tracking tool for Reddit.
 Manually keeping tabs on relevant Reddit posts for traffic generation is a huge waste of time. On /r/AskReddit, with over 200++ posts an hour, trying to keep track of links that might just hit the front page is a full time job in itself.
 
 Enter Reddit Track.
+
+The full website source code is contained in this repository. You can also see a live demo here -:
+
+http://reddittrack.herokuapp.com
