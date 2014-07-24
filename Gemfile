@@ -31,3 +31,4 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'unicorn'
 gem 'redditkit', :git => 'https://github.com/RichardAE/RedditKit.rb.git'
 gem 'foreman'
+gem 'newrelic_rpm'
