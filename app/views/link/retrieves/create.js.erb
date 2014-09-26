@@ -1,1 +1,5 @@
-console.log("<%= params[:path] %>");
+<% if !@track %>
+  alert("<%= @track %>");
+<% else %>
+  alert("<%= @track %>");
+<% end %>
