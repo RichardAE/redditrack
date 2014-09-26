@@ -1,3 +1,11 @@
+<div>Add Track via URL</div>
+<div>
+  <%= form_tag(link_retrieve_path, remote: true, class: "tmt") do |form| %>
+    <%= text_field_tag :path, nil, class: "inputpad click_clear", placeholder: "Enter reddit Link here..." %>
+    <%= submit_tag "Submit", class: "btn btn-info", data: { disable_with: "Working..." } %>
+  <% end %>
+</div>
+
 <table id="tracks_content" class="table">
   <thead>
     <th>

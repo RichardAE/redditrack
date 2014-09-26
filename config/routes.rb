@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   resource :dashboard, only: [:show]
   resources :subs, only: [:create, :destroy]
   resource :sub_search, only: [:create]
-  resources :link_searches, only: [:create, :update]
+
+  namespace :link do
+    resource :retrieve, only: [:create]
+    resources :searches, only: [:create, :update]
+  end
+
   resources :users, only: [:show, :edit, :update] do
     resources :tracks, only: [:create, :update, :destroy]
   end
