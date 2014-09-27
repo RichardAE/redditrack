@@ -1,7 +1,6 @@
 class Dashboard
   def initialize(user)
     @user ||= user
-    subscribed_subs
   end
 
   def subscribed_subs

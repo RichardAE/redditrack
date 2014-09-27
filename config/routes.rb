@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "homes#show"
 
   resource :dashboard, only: [:show]
-  resources :subs, only: [:create, :destroy]
+  resources :subs, only: [:index, :create, :destroy]
   resource :sub_search, only: [:create]
 
   namespace :link do

@@ -98,18 +98,28 @@ function add_temporary_row_color(id, type)
   window.setTimeout("remove_color();", 3000);
 }
 
-$(function() {
-  bind_popovers_on_links();
-  bind_quick_hides();
-  bind_click_clear();
-
-  $('#start_tour').on("click", function(event) {
-    introJs().setOptions({ 'tooltipPosition': 'right' }).start();
+function load_subs(subs_path)
+{
+  $.ajax({
+    url: subs_path,
+    dataType: 'script'
   });
+}
 
-  // Check we're on the dashboard, then start update worker
+$(function() {
   if(typeof(gon) != 'undefined')
   {
+    bind_popovers_on_links();
+    bind_quick_hides();
+    bind_click_clear();
+
+    $('#start_tour').on("click", function(event) {
+      introJs().setOptions({ 'tooltipPosition': 'right' }).start();
+    });
+
+    // Check we're on the dashboard, then start update worker
+    
+    window.setTimeout("load_subs('" + gon.subs_path + "');", 1000);
     window.setTimeout("update_tracks();", 10000);
   }
 });
