@@ -1,2 +1,3 @@
 $('#subscribed_subs_outer').html("<%= j render 'shared/subscribed_subs', subs: @dashboard.subscribed_subs %>");
 $('#subs_search_select').html("<%= j render 'subs/search_select', subs: @dashboard.subs_for_search %>");
+$('#subs_loading').hide();

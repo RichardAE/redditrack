@@ -106,6 +106,14 @@ function load_subs(subs_path)
   });
 }
 
+function load_links(links_path)
+{
+  $.ajax({
+    url: links_path,
+    dataType: 'script'
+  });
+}
+
 $(function() {
   if(typeof(gon) != 'undefined')
   {
@@ -119,7 +127,8 @@ $(function() {
 
     // Check we're on the dashboard, then start update worker
     
-    window.setTimeout("load_subs('" + gon.subs_path + "');", 1000);
+    window.setTimeout("load_links('" + gon.links_path + "');", 1000);
+    window.setTimeout("load_subs('" + gon.subs_path + "');", 2000);
     window.setTimeout("update_tracks();", 10000);
   }
 });
