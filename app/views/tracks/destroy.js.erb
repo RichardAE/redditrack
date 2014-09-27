@@ -9,3 +9,7 @@ if ($('#<%= div_id_s("link_tracked", @track.name) %>').length > 0)
 
 // Remove from tracks array to prevent AJAX update for deleted tracks
 remove_from_array(gon.user_tracks, '<%= @track.name %>');
+
+<% if current_user.reload.tracks_count == 0 %>
+  $('#links_nolinks').show();
+<% end %>

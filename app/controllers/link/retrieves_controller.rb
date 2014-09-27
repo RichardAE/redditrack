@@ -1,7 +1,7 @@
 class Link::RetrievesController < ApplicationController
   def create 
     client = Reddit::Shared.new.create_client(current_user)
-    @link = Reddit::SingleLink.new(client, "t3_2hliy2").retrieve
+    @link = Reddit::LinkViaUrl.new(current_user, params[:path]).retrieve
     @track = current_user.tracks.new
   end
 end
