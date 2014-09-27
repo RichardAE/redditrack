@@ -133,7 +133,6 @@ function stop_search_loading()
 $(function() {
   if(typeof(gon) != 'undefined')
   {
-    bind_popovers_on_links();
     bind_quick_hides();
     bind_click_clear();
     bind_search_loading();
