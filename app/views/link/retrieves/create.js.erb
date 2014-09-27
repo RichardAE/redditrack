@@ -1,5 +1,5 @@
-<% if !@track %>
-  alert("<%= @track %>");
+<% if !@link %>
+  $('#link_via_url_content').html("That wasn't a valid reddit link, try again.");
 <% else %>
-  alert("<%= @track %>");
+  $('#link_via_url_content').html("<%= j render 'tracks/new_track', link: @link, track: @track %>");
 <% end %>

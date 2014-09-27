@@ -19,6 +19,11 @@ Assigned to:	You
   width: 150px; 
 }
 
+.large_input
+{ 
+  width: 230px; 
+}
+
 #sub_search_results {
   padding-bottom: 10px;
   border-bottom: 1px solid #DDD; 
