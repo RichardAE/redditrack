@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @dashboard = Dashboard.new(current_user)
+    @dashboard = DashboardFacade.new(current_user)
     pass_data_to_js
   end
 
