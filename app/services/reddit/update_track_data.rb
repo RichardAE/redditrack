@@ -8,6 +8,7 @@ class Reddit::UpdateTrackData < Reddit::Shared
     link = Reddit::SingleLink.new(@client, @track_id).retrieve
     track = @user.tracks.find_by_name(@track_id)
     track.update_attributes(score: link.score.to_i, hit_target: check_has_hit_target(link, track))
+    track.increment!(:total_pings)
     email_notify(track)
     track
   end

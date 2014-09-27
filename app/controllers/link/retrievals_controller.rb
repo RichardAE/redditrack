@@ -1,4 +1,6 @@
 class Link::RetrievalsController < ApplicationController
+  before_action :authenticate_user!, :only_respond_to_ajax
+  
   def show
     @dashboard = Dashboard.new(current_user)
   end

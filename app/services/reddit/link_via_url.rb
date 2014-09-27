@@ -15,7 +15,7 @@ class Reddit::LinkViaUrl < Reddit::Shared
   private
 
   def valid_reddit_link?
-    @path =~ /http:\/\/www\.reddit\.com\/r\/([a-z0-9])+\/comments\/([a-z0-9])+\/([a-z0-9_])+(\/)?/
+    @path =~ /http:\/\/www\.reddit\.com\/r\/([a-zA-Z0-9])+\/comments\/+(\/)?/
   end
 
   def get_unique_link_id
