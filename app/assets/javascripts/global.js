@@ -98,18 +98,56 @@ function add_temporary_row_color(id, type)
   window.setTimeout("remove_color();", 3000);
 }
 
-$(function() {
-  bind_popovers_on_links();
-  bind_quick_hides();
-  bind_click_clear();
-
-  $('#start_tour').on("click", function(event) {
-    introJs().setOptions({ 'tooltipPosition': 'right' }).start();
+function load_subs(subs_path)
+{
+  $.ajax({
+    url: subs_path,
+    dataType: 'script'
   });
+}
 
-  // Check we're on the dashboard, then start update worker
+function load_links(links_path)
+{
+  $.ajax({
+    url: links_path,
+    dataType: 'script'
+  });
+}
+
+function bind_search_loading()
+{
+  $('#link_search_btn').on("click", function(e) {
+    $('#links_content').hide();
+    $('#links_more').hide();
+    $('#links_loading').show();
+  });
+}
+
+function stop_search_loading()
+{
+  $('#links_content').show();
+  $('#links_loading').hide();
+  $('#links_more').show();
+}
+
+$(function() {
   if(typeof(gon) != 'undefined')
   {
+    bind_popovers_on_links();
+    bind_quick_hides();
+    bind_click_clear();
+    bind_search_loading();
+
+    $('#start_tour').on("click", function(event) {
+      introJs().setOptions({ 'tooltipPosition': 'right' }).start();
+    });
+
+
+
+    // Check we're on the dashboard, then start update worker
+    
+    window.setTimeout("load_links('" + gon.links_path + "');", 1000);
+    window.setTimeout("load_subs('" + gon.subs_path + "');", 2000);
     window.setTimeout("update_tracks();", 10000);
   }
 });

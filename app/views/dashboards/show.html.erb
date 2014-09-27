@@ -8,7 +8,7 @@
       
       <div class="widget-content">
         <div id="links_search">
-          <%= render 'shared/search_filter', subs: @dashboard.subs_for_search %>
+          <%= render 'shared/search_filter' %>
         </div>
       </div>  
     </div> 
@@ -20,8 +20,10 @@
       </div>
       
       <div class="widget-content">
+        <div id="links_loading" class="center">
+          <%= image_tag "ajax-loader.gif" %>
+        </div> 
         <div id="links_content">
-          <%= render 'shared/reddit_links', links: @dashboard.reddit_front_page, track: @dashboard.build_track, user_tracks: @dashboard.track_names_array %>
         </div> 
         <div id="links_more">  
         </div>

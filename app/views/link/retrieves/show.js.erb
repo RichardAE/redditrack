@@ -1,0 +1,2 @@
+$('#links_content').html("<%= j render 'shared/reddit_links', links: @dashboard.reddit_front_page, track: @dashboard.build_track, user_tracks: @dashboard.track_names_array %>");
+$('#links_loading').hide();
