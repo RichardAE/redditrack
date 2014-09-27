@@ -10,7 +10,7 @@ class DashboardsController < ApplicationController
 
   def pass_data_to_js
     gon.subs_path = subs_path
-    gon.links_path = link_retrieve_path
+    gon.links_path = link_retrievals_path
     gon.user_id = current_user.id
     gon.user_tracks = @dashboard.track_names_array
   end
