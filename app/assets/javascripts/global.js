@@ -114,16 +114,35 @@ function load_links(links_path)
   });
 }
 
+function bind_search_loading()
+{
+  $('#link_search_btn').on("click", function(e) {
+    $('#links_content').hide();
+    $('#links_more').hide();
+    $('#links_loading').show();
+  });
+}
+
+function stop_search_loading()
+{
+  $('#links_content').show();
+  $('#links_loading').hide();
+  $('#links_more').show();
+}
+
 $(function() {
   if(typeof(gon) != 'undefined')
   {
     bind_popovers_on_links();
     bind_quick_hides();
     bind_click_clear();
+    bind_search_loading();
 
     $('#start_tour').on("click", function(event) {
       introJs().setOptions({ 'tooltipPosition': 'right' }).start();
     });
+
+
 
     // Check we're on the dashboard, then start update worker
     

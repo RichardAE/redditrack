@@ -1,6 +1,8 @@
 // Change results header to reflect latest search
 $('#results_header').html('<%= j get_search_header(params[:search][:subreddit],params[:search][:term]) %>');
 
+stop_search_loading();
+
 // Place results into appropriate div
 $("#links_content").html("<%= j render 'shared/reddit_links', links: @search.links_by_term, :track => @search.build_track, user_tracks: @search.track_names_array %>");
 
