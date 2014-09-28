@@ -8,7 +8,6 @@ group :production do
 end
 
 group :development do
-  gem 'spring'
   gem 'sqlite3'
 end
 
@@ -32,3 +31,8 @@ gem 'unicorn'
 gem 'redditkit', :git => 'https://github.com/RichardAE/RedditKit.rb.git'
 gem 'foreman'
 gem 'newrelic_rpm'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'capybara'
+end
