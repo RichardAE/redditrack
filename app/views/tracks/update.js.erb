@@ -17,6 +17,7 @@ $('#<%= div_id_s("track_score", @track.id) %>').html("<%= @track.score %>");
   add_temporary_row_color('<%= div_id_s("track_score_col", @track.id) %>', "success");
 <% end %>
 
+$("#tracks_content").trigger("update"); 
 
 <% if @track.hit_target == 1 %>
 // Alert if target has been reached

@@ -95,3 +95,38 @@ Assigned to:	You
 .large_link { font-size: 16px; font-weight: bold; }
 
 .light { color: #777; }
+
+/* tables */
+#tracks_content {
+  background-color: #FFF;
+  margin:10px 0pt 15px;
+  width: 100%;
+  text-align: left;
+}
+#tracks_content thead tr th, table.tablesorter tfoot tr th {
+  border: 1px solid #FFF;
+  padding: 2px 2px 2px 0px;
+}
+#tracks_content thead tr .header {
+  background-image: url(bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+#tracks_content tbody td {
+  color: #3D3D3D;
+  padding: 6px 2px 6px 2px;
+  vertical-align: top;
+}
+#tracks_content tbody tr.odd td {
+  background-color:#CCC;
+}
+#tracks_content thead tr .headerSortUp {
+  background-image: url(asc.gif);
+}
+#tracks_content thead tr .headerSortDown {
+  background-image: url(desc.gif);
+}
+#tracks_content thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #FFF;
+}
