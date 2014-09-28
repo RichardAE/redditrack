@@ -114,13 +114,11 @@ function load_links(links_path)
   });
 }
 
-function bind_search_loading()
+function start_search_loading()
 {
-  $('#link_search_btn').on("click", function(e) {
-    $('#links_content').hide();
-    $('#links_more').hide();
-    $('#links_loading').show();
-  });
+  $('#links_content').hide();
+  $('#links_more').hide();
+  $('#links_loading').show();
 }
 
 function stop_search_loading()
@@ -128,6 +126,21 @@ function stop_search_loading()
   $('#links_content').show();
   $('#links_loading').hide();
   $('#links_more').show();
+}
+
+
+function bind_search_loading()
+{
+  $('#link_search_btn').on("click", function(e) {
+    start_search_loading();
+  });
+}
+
+function bind_sub_searches()
+{
+  $('.user_sub').on("click", function(e) {
+    start_search_loading();
+  });
 }
 
 $(function() {

@@ -1,6 +1,6 @@
 <div>
   <%= form_tag(link_retrievals_path, remote: true, class: "") do |form| %>
-    <%= text_field_tag :path, nil, class: "inputpad large_input", placeholder: "Enter reddit post URL here..." %>
+    <%= text_field_tag :path, nil, class: "inputpad large_input", placeholder: "Enter a reddit post URL here..." %>
     <%= submit_tag "Submit", class: "btn btn-info", data: { disable_with: "Working..." } %>
   <% end %>
 </div>
