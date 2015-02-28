@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def check_link_tracking(user_tracks, link)
-    if !user_tracks.include?(link.full_name)
+    unless user_tracks.include?(link.full_name)
       'class=hide'
     end
   end
