@@ -1,5 +1,6 @@
-class SubsController < ApplicationController
-  before_action :authenticate_user!, :only_respond_to_ajax
+class SubredditsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :only_respond_to_ajax
   
   def index
     @subreddit = SubredditFacade.new(current_user)

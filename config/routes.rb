@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [:show]
   
-  resources :subs, only: [:index, :create, :destroy]
-  resources :sub_searches, only: [:create]
+  resources :subreddits, only: [:index, :create, :destroy]
+  resources :subreddit_searches, only: [:create]
 
   namespace :link do
     resource :retrievals, only: [:show, :create]
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     resources :tracks, only: [:create, :update, :destroy]
   end
+
   resources :votes, only: [:update]
 end

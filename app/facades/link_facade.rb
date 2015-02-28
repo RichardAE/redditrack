@@ -1,4 +1,4 @@
-class LinkFacade < SharedFacade
+class LinkFacade < BaseFacade
   def initialize(user, sub)
     @user = user
     @sub = sub

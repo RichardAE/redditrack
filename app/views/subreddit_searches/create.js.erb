@@ -7,11 +7,11 @@ $('#sub_search_results').html('').removeClass('hide');
     // if not already subscribed, add to results
     if($('#<%= div_id_s("sub", sub.full_name) %>').length == 0)
     {
-      $('#sub_search_results').append("<%= j render 'sub_searches/sub_search_result', sub: sub, subscribed: false %>");
+      $('#sub_search_results').append("<%= j render 'subreddit_searches/sub_search_result', sub: sub, subscribed: false %>");
     }
     else
     {
-      $('#sub_search_results').append("<%= j render 'sub_searches/sub_search_result', sub: sub, subscribed: true %>");
+      $('#sub_search_results').append("<%= j render 'subreddit_searches/sub_search_result', sub: sub, subscribed: true %>");
     }
   <% end %>
 <% end %>

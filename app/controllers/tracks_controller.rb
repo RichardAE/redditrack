@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
-  before_filter :authenticate_user!, :only_respond_to_ajax
+  before_action :authenticate_user!
+  before_action :only_respond_to_ajax
 
   def create
     @track = create_track

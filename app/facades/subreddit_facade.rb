@@ -1,4 +1,4 @@
-class SubredditFacade < SharedFacade
+class SubredditFacade < BaseFacade
   def initialize(user)
     super
   end
@@ -8,6 +8,6 @@ class SubredditFacade < SharedFacade
   end
 
   def subs_for_search
-    @subs_for_search ||= Hash[ @subreddits.map{ |s| [s.name,s.name] } ]
+    @subs_for_search ||= Hash[ @subreddits.map{ |s| [s.name, s.name] } ]
   end
 end

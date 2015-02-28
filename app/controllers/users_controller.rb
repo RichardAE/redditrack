@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   def edit
     @dashboard = DashboardFacade.new(current_user)
@@ -7,15 +7,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    update_user
+    current_user.update_attributes(user_params)
     only_respond_to_ajax
   end
 
   private
-
-  def update_user
-    current_user.update_attributes(user_params)
-  end
 
   def pass_data_to_js
     gon.user_id = current_user.id

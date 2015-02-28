@@ -1,4 +1,4 @@
-class DashboardFacade < SharedFacade
+class DashboardFacade < BaseFacade
   def initialize(user)
     super
   end

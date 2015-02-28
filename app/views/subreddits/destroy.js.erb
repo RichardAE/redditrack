@@ -1,0 +1,8 @@
+// Update user subs list
+$('#subscribed_subs').html("<%= j render 'shared/subscribed_subs', subreddits: @subreddit.user_subscribed_subs %>");
+
+// Update search filter with new subs
+$('#links_search').html("<%= j render 'shared/search_filter', subreddits: @subreddit.subs_for_search %>");
+
+bind_quick_hides();
+bind_sub_searches();

@@ -1,5 +1,5 @@
 Search Subs
-<%= form_tag(sub_searches_path, method: :post, remote: true, class: "tmt") do |form| %>
+<%= form_tag(subreddit_searches_path, method: :post, remote: true, class: "tmt") do |form| %>
   <%= text_field_tag :search, nil, class: "inputpad click_clear", placeholder: "Enter search term..." %>
   <%= submit_tag "Search", class: "btn btn-info", data: { disable_with: "Working..." } %>
 <% end %>
