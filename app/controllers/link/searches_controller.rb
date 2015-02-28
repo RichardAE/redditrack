@@ -1,4 +1,4 @@
-class LinkSearchesController < ApplicationController
+class Link::SearchesController < ApplicationController
   before_action :authenticate_user!, :only_respond_to_ajax
 
   def create

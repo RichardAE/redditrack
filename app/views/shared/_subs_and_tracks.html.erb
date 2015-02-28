@@ -1,4 +1,15 @@
 <div class="col-md-4 col-xs-12">
+  <div class="widget" data-step="6" data-intro="Or add a track via URL" data-position="left">
+    <div class="widget-header"> 
+      <i class="icon-plane"></i>
+      <h3>Track via URL</h3>
+    </div>
+    
+    <div class="widget-content">
+      <%= render 'link/via_url' %>
+    </div>  
+  </div>  
+
   <div class="widget" data-step="4" data-intro="All links you are tracking will display here. Scores update in real time every 10 seconds (one link per update)" data-position="left">
     <div class="widget-header"> 
       <i class="icon-star"></i>
@@ -17,7 +28,11 @@
     
     <div class="widget-content">
       <%= render 'shared/search_subs' %><br>
-      <%= render 'shared/subscribed_subs', subs: @dashboard.subscribed_subs %>
+      <div id="subs_loading" class="center">
+          <%= image_tag "ajax-loader.gif" %>
+        </div> 
+      <div id="subscribed_subs_outer">
+      </div>
     </div>  
   </div>  
 </div>

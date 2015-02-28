@@ -11,7 +11,7 @@
     <%= track.target_score %> 
   </td>
   <td>
-    <%= link_to user_track_path(current_user, track), method: :delete, :remote => true  do %>
+    <%= link_to user_track_path(current_user, track), method: :delete, data: { confirm: "Do you really want to delete this track?"}, :remote => true  do %>
       <i class="icon-remove"></i>
     <% end %>
   </td>

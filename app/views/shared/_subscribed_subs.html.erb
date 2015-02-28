@@ -1,7 +1,7 @@
 <div id="subscribed_subs">
   <% subs.each do |sub| %>
     <div <%= div_id('sub', sub.full_name) %>>
-      <%= sub.name %>&nbsp;&nbsp;
+      <%= link_to sub.name, { controller: "link/retrievals", action: :show, subreddit: sub.name }, class: 'user_sub', remote: true %>&nbsp;&nbsp;
       <%= link_to sub_path(:id => sub.full_name), method: :delete, :remote => true do %>
       <i class="icon-remove quick_hide_parent"></i>
       <% end %>

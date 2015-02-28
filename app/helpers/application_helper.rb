@@ -42,9 +42,9 @@ module ApplicationHelper
 
   def get_search_header(sub,term)
     if sub.blank?
-      ("Links from all subs" + get_search_term(term)).html_safe
+      ("Links from all subs" + get_search_term(trim_content(term, 50))).html_safe
     else
-      ("Links from /r/#{sub}"  + get_search_term(term)).html_safe
+      ("Links from /r/#{sub}"  + get_search_term(trim_content(term, 50))).html_safe
     end
   end
 

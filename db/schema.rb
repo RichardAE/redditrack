@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722164156) do
+ActiveRecord::Schema.define(version: 20140926195307) do
 
   create_table "tracks", force: true do |t|
     t.string   "title",        default: "", null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140722164156) do
     t.integer  "hit_target",   default: 0,  null: false
     t.integer  "first_score",  default: 0,  null: false
     t.string   "permalink",    default: "", null: false
+    t.integer  "total_pings",  default: 0,  null: false
   end
 
   add_index "tracks", ["user_id"], name: "index_tracks_on_user_id"

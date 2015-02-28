@@ -1,0 +1,5 @@
+$('#subscribed_subs_outer').html("<%= j render 'shared/subscribed_subs', subs: @subreddit.subscribed_subs %>");
+$('#subs_search_select').html("<%= j render 'subs/search_select', subs: @subreddit.subs_for_search %>");
+$('#subs_loading').hide();
+
+bind_sub_searches();

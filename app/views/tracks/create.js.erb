@@ -1,6 +1,10 @@
 // Hide placeholder if it's showing
 <% if @track.errors.count > 0 %>
-  $('.target').css('outline', 'red solid thin');
+  <% if @track.errors.has_key?(:target_score) %>
+    $('.target').css('outline', 'red solid thin');
+  <% else %>
+    alert("You are already tracking this post");
+  <% end %>
 <% else %>
   // Hide placeholder is visible
   $('#links_nolinks').hide();
@@ -17,4 +21,9 @@
   gon.user_tracks.push("<%= @track.name %>");
   $('.target').css('outline', 'none');
   hide_popovers();
+  $('#link_via_url_content').slideUp();
+  $('#path').val('');
+
+  $("#tracks_content").trigger("update"); 
+  
 <% end %>

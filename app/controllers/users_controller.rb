@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def edit
-    @dashboard = Dashboard.new(current_user)
+    @dashboard = DashboardFacade.new(current_user)
     pass_data_to_js
   end
 

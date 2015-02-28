@@ -1,12 +1,12 @@
 <table id="tracks_content" class="table">
   <thead>
-    <th>
+    <th style="width: 20%">
       Score
     </th>
     <th>
       Title
     </th>
-    <th>
+    <th style="width: 20%">
       Target
     </th>
     <th>
@@ -21,3 +21,13 @@
   <% end %>
   </tbody>
 </table>
+
+<script>
+  $("#tracks_content").tablesorter({ 
+      headers: {  
+          3: { 
+              sorter: false 
+          } 
+      } 
+  });
+</script>

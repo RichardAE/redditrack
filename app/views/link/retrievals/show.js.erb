@@ -1,0 +1,16 @@
+<% if params.has_key?(:subreddit) %>
+  $('#results_header').html('<%= j get_search_header(params[:subreddit], "") %>');
+  $('#links_content').html("<%= j render 'shared/reddit_links', links: @links.reddit_by_sub, track: @links.build_track, user_tracks: @links.track_names_array %>");
+
+  $('#links_loading').hide();
+  $('#search_subreddit').val('<%= params[:subreddit] %>');
+<% else %>
+  $('#results_header').html('Reddit front page');
+  $('#links_content').html("<%= j render 'shared/reddit_links', links: @links.reddit_front_page, track: @links.build_track, user_tracks: @links.track_names_array %>");
+  
+  $('#links_loading').hide();
+<% end %>
+
+stop_search_loading();
+bind_popovers_on_links();
+bind_quick_hides();
