@@ -17,3 +17,13 @@
 
 # Ignore application configuration
 /config/application.yml
+.idea/.generators
+.idea/.name
+.idea/.rakeTasks
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/reddittrack.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/scopes/scope_settings.xml
