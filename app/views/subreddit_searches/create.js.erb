@@ -1,17 +1,17 @@
-$('#sub_search_results').html('').removeClass('hide');
+$('#subreddit_search_results').html('').removeClass('hide');
 
 <% if @search.search_subs_by_name.count == 0 %>
-  $('#sub_search_results').html('No matches found.');
+  $('#subreddit_search_results').html('No matches found.');
 <% else %>
   <% @search.search_subs_by_name.take(5).each do |sub| %>
     // if not already subscribed, add to results
     if($('#<%= div_id_s("sub", sub.full_name) %>').length == 0)
     {
-      $('#sub_search_results').append("<%= j render 'subreddit_searches/sub_search_result', sub: sub, subscribed: false %>");
+      $('#subreddit_search_results').append("<%= j render 'subreddit_searches/search_result', sub: sub, subscribed: false %>");
     }
     else
     {
-      $('#sub_search_results').append("<%= j render 'subreddit_searches/sub_search_result', sub: sub, subscribed: true %>");
+      $('#subreddit_search_results').append("<%= j render 'subreddit_searches/search_result', sub: sub, subscribed: true %>");
     }
   <% end %>
 <% end %>

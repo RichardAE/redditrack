@@ -13,28 +13,28 @@ module ApplicationHelper
   end
 
   def vote_up_link(link)
-    if !link.attributes[:likes].nil?
-      "<i class=\"icon-thumbs-up\"></i>".html_safe
-    else
+    if link.attributes[:likes].nil?
       generate_vote_btn(link)
+    else
+      '<i class=icon-thumbs-up></i>'.html_safe
     end
   end
 
   def check_link_tracking(user_tracks, link)
     if !user_tracks.include?(link.full_name)
-      "class=hide"
+      'class=hide'
     end
   end
 
   def check_link_tracked(user_tracks, link)
    if user_tracks.include?(link.full_name)
-      "class=hide"
+      'class=hide'
     end
   end
 
   def check_hit_target(track)
     if track.score >= track.target_score
-      "hit_target"
+      'hit_target'
     else
       check_rise_or_fall(track)
     end
@@ -42,47 +42,47 @@ module ApplicationHelper
 
   def get_search_header(sub,term)
     if sub.blank?
-      ("Links from all subs" + get_search_term(trim_content(term, 50))).html_safe
+      "Links from all subs #{get_search_term(trim_content(term, 50))}".html_safe
     else
-      ("Links from /r/#{sub}"  + get_search_term(trim_content(term, 50))).html_safe
+      "Links from /r/#{sub}#{get_search_term(trim_content(term, 50))}".html_safe
     end
   end
 
   def trim_content(text, limit)
-    if !text.blank?
+    unless text.blank?
       TrimContentWithWords.trimmed_content(text, limit)
     end
   end
 
   def bootstrap_class_for flash_type
     if flash_type == 'alert'
-      "alert-danger"
+      'alert-danger'
     else
-      "alert-success"
+      'alert-success'
     end
   end
 
   private
 
   def get_search_term(term)
-    if !term.blank?
-      " for '<b>#{term}</b>'"
+    if term.blank?
+      ''
     else
-      ""
+      " for '<b>#{term}</b>'"
     end
   end
 
   def check_rise_or_fall(track)
     if track.score >= track.first_score
-      "rising"
+      'rising'
     else
-      "falling"
+      'falling'
     end
   end
 
   def generate_vote_btn(link)
-    link_to vote_path(id: link.full_name), method: :put, title: "Upvote", remote: true do 
-      "<i class=\"quick_hide icon-arrow-up\"></i>".html_safe
+    link_to vote_path(id: link.full_name), method: :put, title: "Up-vote", remote: true do
+      '<i class=quick_hide icon-arrow-up></i>'.html_safe
     end
   end
 end
