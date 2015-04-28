@@ -6,7 +6,7 @@ class Link::RetrievalsController < ApplicationController
   end
 
   def create 
-    @link = Reddit::LinkViaUrl.new(current_user, params[:path]).retrieve
+    @link = Reddit::FetchPostViaUrl.run(current_user, params[:path])
     @track = current_user.tracks.new
   end
   

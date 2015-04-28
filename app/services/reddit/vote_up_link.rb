@@ -5,7 +5,7 @@ class Reddit::VoteUpLink < Reddit::Shared
   end
 
   def process
-    link = Reddit::SingleLink.new(@client, @link_id).retrieve
+    link = Reddit::FetchPost.new(@client, @link_id).retrieve
     @client.upvote(link) 
     link
   end
