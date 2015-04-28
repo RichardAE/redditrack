@@ -1,10 +1,9 @@
-class RefreshRedditToken
-  def initialize(user)
-    @user = user
-  end
+class RefreshRedditToken < BaseService
 
-  def refresh_token
-    if user_needs_token_refresh?
+  def execute(user)
+    @user = user
+
+    if user_requires_token_refresh?
       response = make_refresh_request
       parsed_response = JSON.parse(response.body)
 
@@ -14,7 +13,7 @@ class RefreshRedditToken
 
   private
 
-  def user_needs_token_refresh?
+  def user_requires_token_refresh?
     now = Time.now.to_datetime.to_i
     signed = @user.token_signed_at.to_datetime.to_i
 

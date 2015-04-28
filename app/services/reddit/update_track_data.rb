@@ -33,7 +33,7 @@ class Reddit::UpdateTrackData < Reddit::Shared
 
   def email_notify(track)
     if track.hit_target == 1 && @user.notify_me && @user.email !~ /user\d+@reddittrack.com/
-      EmailUserAfterTarget.new(@user, track).process
+      TrackMailer.hit_target(@user, track).deliver
     end
   end
 end

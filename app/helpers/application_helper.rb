@@ -50,7 +50,7 @@ module ApplicationHelper
 
   def trim_content(text, limit)
     unless text.blank?
-      TrimContentWithWords.trimmed_content(text, limit)
+      TrimContentWithWords.run(text, limit)
     end
   end
 

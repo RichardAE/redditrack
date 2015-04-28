@@ -1,7 +1,8 @@
-class TrimContentWithWords
-  def self.trimmed_content(text, limit_to_trim)
+class TrimContentWithWords < BaseService
+
+  def execute(text, limit_to_trim)
     if text.length > limit_to_trim
-      self.perform_trim(text, limit_to_trim)
+      perform_trim(text, limit_to_trim)
     else
       text
     end
@@ -9,7 +10,9 @@ class TrimContentWithWords
 
   private
 
-  def self.perform_trim(text, limit_to_trim)
-    text.split(" ").each_with_object("") {|x,ob| break ob unless (ob.length + " ".length + x.length <= limit_to_trim);ob << (" " + x)}.strip + "..."
+  def perform_trim(text, limit_to_trim)
+    text.split(" ").each_with_object("") do |x,ob|
+      break ob unless (ob.length + " ".length + x.length <= limit_to_trim);ob << (" " + x)
+    end.strip + "..."
   end
 end
