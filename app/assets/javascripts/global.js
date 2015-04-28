@@ -98,7 +98,7 @@ function add_temporary_row_color(id, type)
   window.setTimeout("remove_color();", 3000);
 }
 
-function load_subs(subreddits_path)
+function load_subreddits(subreddits_path)
 {
   $.ajax({
     url: subreddits_path,
@@ -157,7 +157,7 @@ $(function() {
     // Check we're on the dashboard, then start update worker
     
     window.setTimeout("load_links('" + gon.links_path + "');", 1000);
-    window.setTimeout("load_subs('" + gon.subreddits_path + "');", 2000);
+    window.setTimeout("load_subreddits('" + gon.subreddits_path + "');", 2000);
     window.setTimeout("update_tracks();", 10000);
   }
 });

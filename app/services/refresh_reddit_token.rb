@@ -4,7 +4,7 @@ class RefreshRedditToken < BaseService
     @user = user
 
     if user_requires_token_refresh?
-      response = make_refresh_request
+      response        = make_refresh_request
       parsed_response = JSON.parse(response.body)
 
       save_refresh_token(parsed_response)
@@ -14,7 +14,7 @@ class RefreshRedditToken < BaseService
   private
 
   def user_requires_token_refresh?
-    now = Time.now.to_datetime.to_i
+    now    = Time.now.to_datetime.to_i
     signed = @user.token_signed_at.to_datetime.to_i
 
     (now - signed) >= 3600

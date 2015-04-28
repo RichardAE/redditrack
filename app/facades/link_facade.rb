@@ -5,7 +5,7 @@ class LinkFacade < BaseFacade
   end
 
   def reddit_front_page
-    @links ||= Reddit::LinksFrontPage.new(@user).retrieve
+    @links ||= Reddit::FetchFrontPage.run(@user)
   end
 
   def reddit_by_sub
