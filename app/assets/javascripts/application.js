@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require lazybox
+//= require intro.min
+//= require jquery.tablesorter.min
+//= require msgGrowl.min
 //= require_tree .

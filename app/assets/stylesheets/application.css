@@ -12,6 +12,10 @@
  *
  *= require lazybox
  *= require bootstrap_and_overrides
+ *= require base-admin-3
+ *= require base-admin-3-responsive
+ *= require introjs
+ *= require msgGrowl
  *= require_tree .
  *= require_self
  */
