@@ -16,7 +16,7 @@ module ApplicationHelper
     if link.attributes[:likes].nil?
       generate_vote_btn(link)
     else
-      '<i class=icon-thumbs-up></i>'.html_safe
+      '<i class="icon-thumbs-up"></i>'.html_safe
     end
   end
 
@@ -82,7 +82,7 @@ module ApplicationHelper
 
   def generate_vote_btn(link)
     link_to vote_path(id: link.full_name), method: :put, title: "Up-vote", remote: true do
-      '<i class=quick_hide icon-arrow-up></i>'.html_safe
+      '<i class="quick_hide icon-arrow-up"></i>'.html_safe
     end
   end
 end

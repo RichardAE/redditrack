@@ -5,7 +5,7 @@ class Reddit::UpdateTrackData < Reddit::Shared
   end
 
   def process
-    link = Reddit::FetchPost.new(@client, @track_id).retrieve
+    link = Reddit::FetchPost.run(@client, @track_id)
     track = @user.tracks.find_by_name(@track_id)
     track.update_attributes(score: link.score.to_i, hit_target: check_has_hit_target(link, track))
     track.increment!(:total_pings)
