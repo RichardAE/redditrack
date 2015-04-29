@@ -21,15 +21,11 @@ module ApplicationHelper
   end
 
   def check_link_tracking(user_tracks, link)
-    unless user_tracks.include?(link.full_name)
-      'class=hide'
-    end
+    'class=hide' unless user_tracks.include?(link.full_name)
   end
 
   def check_link_tracked(user_tracks, link)
-   if user_tracks.include?(link.full_name)
-      'class=hide'
-    end
+    'class=hide' if user_tracks.include?(link.full_name)
   end
 
   def check_hit_target(track)
@@ -49,9 +45,7 @@ module ApplicationHelper
   end
 
   def trim_content(text, limit)
-    unless text.blank?
-      TrimContentWithWords.run(text, limit)
-    end
+    TrimContentWithWords.run(text, limit) unless text.blank?
   end
 
   def bootstrap_class_for flash_type
@@ -81,7 +75,7 @@ module ApplicationHelper
   end
 
   def generate_vote_btn(link)
-    link_to vote_path(id: link.full_name), method: :put, title: "Up-vote", remote: true do
+    link_to(vote_path(id: link.full_name), method: :put, title: "Up-vote", remote: true) do
       '<i class="quick_hide icon-arrow-up"></i>'.html_safe
     end
   end
